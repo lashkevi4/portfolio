@@ -1,0 +1,99 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+}
+section {
+    background-color: lightblue;
+    margin-bottom: 1rem;
+}
+.reunaviiva {
+    border: 1px solid black ;
+}
+#punch {
+    float: left;
+    font-size: 500%;
+    width: 1.2em;
+    text-align: center;
+    padding: 0.1em 0.1em 0;
+    background-color: rgb(98, 27, 134);
+    color: white;
+    border: 1px solid white;
+    border-width: 0 0.2em 0.2em 0;
+    margin: 0 0.5em 0.2em 0;
+}
+h1,p,pre,h2,h3 {
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    padding-bottom: 1rem;
+}
+figure {
+    width: 100px;
+    float: left;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border: 1Px solid black;
+    border-width: 0 1px 1px 0;
+    padding: 0 10px 5px 0;
+    margin: -1px 25px 10px -1px;
+    
+}
+figure img {
+   max-width: 100%;
+}
+h1 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding-block-start: 1rem;
+}
+h2 {
+    padding-block-start: 1.5rem;
+    background-color: rgba(138,125,166,0.514);
+    text-align: right;
+    text-transform: lowercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-block-end: 1rem;
+}
+h3 {
+    font-weight: 700px;
+}
+pre {
+    font-family: 'Courier New', Courier, monospace;
+}
+ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+ul:last-child {
+    margin-bottom: 1rem;
+}
+.banner1 {
+    float: left; 
+    width: 300px; 
+    text-align: center; 
+    background-color: white; 
+    color: black; 
+    border: solid black 1px; 
+    border-width: 0 1px 1px 0; 
+    padding: 1rem; 
+    margin: -1px 25px 10px -1px;
+}
+.banner2 {
+    float: right; 
+    width: 25%; 
+    text-align: left; 
+    font-size: 140%;
+    font-weight: bold; 
+    font-style: italic; 
+    padding: 1em; 
+    text-indent: -0.5em;
+    background: white; 
+    color: black; 
+    border: solid black 1px; 
+    border-width:1px 0 1px 1px; 
+    margin: 0.2em -1px 0.2em 0.5em;
+}

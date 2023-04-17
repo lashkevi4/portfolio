@@ -1,0 +1,21 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Первый урок по JavaScript</title>
+</head>
+
+<body>
+  <h1>Первый урок по JavaScript</h1>
+  <p>Нажмите на кнопку, чтобы узнать текущее время.</p>
+  <button onclick="showTime()">Показать время</button>
+  <script>
+    function showTime() {
+      var date = new Date();
+      var time = date.toLocaleTimeString();
+      alert('Текущее время: ' + time);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Пример JavaScript</title>
+  <style>
+    #myDiv {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+      animation: myAnimation 2s infinite;
+    }
+
+    @keyframes myAnimation {
+      0% {
+        left: 0px;
+      }
+
+      50% {
+        left: 500px;
+      }
+
+      100% {
+        left: 0px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Нажмите кнопку, чтобы изменить текст и запустить анимацию:</h1>
+  <button onclick="changeText()">Нажми меня</button>
+  <p id="myPara">Привет, это текст, который будет изменен после нажатия кнопки!</p>
+  <div id="myDiv"></div>
+  <script>
+    function changeText() {
+      var para = document.getElementById("myPara");
+      para.innerHTML = "Текст изменен!";
+      var div = document.getElementById("myDiv");
+      div.style.backgroundColor = "green";
+    }
+  </script>
+</body>
+
+</html>

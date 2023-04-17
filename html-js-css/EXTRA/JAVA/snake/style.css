@@ -1,0 +1,15 @@
+#game-canvas {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  position: relative;
+  border: 1px solid #CCC;
+}
+
+.snake-head {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+}

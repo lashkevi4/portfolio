@@ -1,0 +1,138 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+}
+
+.box1 {
+  background-color: lightskyblue;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.box1 h1 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.punch {
+  float: left;
+  font-size: 500%;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  padding: 5px 5px 0;
+  background-color: rgb(98, 27, 134);
+  color: white;
+  border: 1px solid white;
+  border-width: 0 0.2em 0.2em 0;
+  margin: 0 0.5em 0.2em 0;
+}
+
+.box2 {
+  position: relative;
+  border: 1px solid black;
+  background-color: lightskyblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.box2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index: 2; */
+  background-color: white;
+  width: 60px;
+  padding: 5px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.box2 p {
+  margin-left: 70px;
+  margin-top: 5px;
+}
+
+.box2 p:nth-child(5) {
+  margin-left: 10px;
+}
+
+h2 {
+  background-color: rgba(138, 125, 166, 0.514);
+  text-align: right;
+  text-transform: lowercase;
+  font-weight: 800;
+  line-height: 20px;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px
+}
+
+
+
+.box3 {
+  margin-top: 10px;
+  border: 1px solid black;
+  background-color: lightskyblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0;
+}
+
+.first-bar {
+  background: white;
+  border: 1px solid black;
+  border-top: 0;
+  border-left: 0;
+  overflow: auto;
+  display: inline-block;
+  width: 40%;
+  height: 50px;
+  padding: 5px;
+  padding-top: 10px;
+  vertical-align: top;
+  margin-right: 0;
+  font-size: 13px;
+
+}
+
+.second-bar {
+  margin-left: 0;
+  background-color: rgba(138, 125, 166, 0.514);
+  font-weight: 800;
+  display: inline-block;
+  width: 58.55%;
+  height: 30px;
+  border: 1px solid black;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  padding: 5px;
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 20px;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px
+}
+
+.box3 p {
+  font-size: 13px;
+  padding: 5px;
+}
+
+p,
+h2,
+h3 {
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  padding-bottom: 1rem;
+}

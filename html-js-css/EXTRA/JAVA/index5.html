@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Пример JavaScript: Простая анимация</title>
+  <style>
+    #box {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: 50px;
+      height: 50px;
+      background-color: #333;
+      transition: transform 1s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box"></div>
+  <script>
+    var box = document.getElementById("box");
+    var x = 50;
+    var y = 50;
+
+    function moveBox() {
+      x += 10;
+      y += 5;
+      box.style.transform = "translate(" + x + "px, " + y + "px)";
+      requestAnimationFrame(moveBox);
+    }
+
+    moveBox();
+  </script>
+</body>
+
+</html>

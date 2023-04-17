@@ -1,0 +1,104 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Alkalami', serif;
+    margin: 1rem;
+    border: 1px solid #69023B;
+    border-radius: 10px;
+
+}
+
+h1,
+h2,
+h3,
+ul li {
+    margin: 1.5rem;
+}
+
+header,
+section,
+footer {
+    padding: 1rem;
+}
+
+header {
+    background-color: #69023B;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 70px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #F9E0D1;
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin-right: 5rem;
+    color: #F9E0D1;
+}
+
+h3 {
+    font-size: 3rem;
+    color: #69023B;
+}
+
+h4 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+    color: #69023B;
+}
+
+ul {
+    margin-inline-start: 1rem;
+}
+
+ul li {
+    font-size: 1.8rem;
+}
+
+section {}
+
+a {
+    color: #69023B;
+    text-decoration: none;
+    /* font-style: inherit; */
+}
+
+a:hover {
+    text-decoration: none;
+    color: #F9E0D1;
+
+}
+
+header,
+.programming,
+.ohjelmistokehittaja,
+.angular {
+    border: 1px solid #69023B;
+    border-width: 0 0 1px 0;
+}
+
+footer {
+    font-size: 1.2rem;
+    background-color: #69023B;
+    border-radius: 0 0 10px 10px;
+}
+
+p {
+    font-size: 2.5rem;
+    color: #69023B;
+}
+
+.footer {
+    display: flex;
+}

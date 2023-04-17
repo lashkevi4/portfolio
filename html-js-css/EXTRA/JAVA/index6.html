@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Пример JavaScript: Игра "Найди число"</title>
+  <style>
+    input[type="number"] {
+      width: 50px;
+      font-size: 20px;
+      padding: 5px;
+      margin: 10px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #result {
+      font-size: 20px;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Игра "Найди число"</h1>
+  <p>Я загадал число от 1 до 100. Угадай, какое число это!</p>
+  <input type="number" id="guess">
+  <button onclick="checkGuess()">Угадать!</button>
+  <div id="result"></div>
+  <script>
+    var number = Math.floor(Math.random() * 100) + 1;
+
+    function checkGuess() {
+      var guess = document.getElementById("guess").value;
+      if (guess == number) {
+        document.getElementById("result").innerHTML = "Поздравляю, вы угадали число!";
+      } else if (guess < number) {
+        document.getElementById("result").innerHTML = "Загаданное число больше!";
+      } else {
+        document.getElementById("result").innerHTML = "Загаданное число меньше!";
+      }
+    }
+  </script>
+</body>
+
+</html>

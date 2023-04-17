@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Пример JavaScript: Интерактивная кнопка с рандомными цветами</title>
+  <style>
+    body {
+      background-color: #fff;
+      transition: background-color 1s ease-in-out;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <button onclick="changeColor()">Нажми меня!</button>
+  <script>
+    function changeColor() {
+      var red = Math.floor(Math.random() * 256);
+      var green = Math.floor(Math.random() * 256);
+      var blue = Math.floor(Math.random() * 256);
+      var bgColor = "rgb(" + red + "," + green + "," + blue + ")";
+      document.body.style.backgroundColor = bgColor;
+    }
+  </script>
+</body>
+
+</html>

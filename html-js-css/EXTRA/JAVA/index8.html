@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Поймай красный квадрат</title>
+  <style>
+    #canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="canvas" width="500" height="500"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let score = 0;
+    let squareX = canvas.width / 2;
+    let squareY = canvas.height / 2;
+    let squareSize = 50;
+    let targetX = Math.random() * (canvas.width - squareSize);
+    let targetY = Math.random() * (canvas.height - squareSize);
+    let targetSize = 25;
+
+    function draw() {
+      // Очистить холст
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Нарисовать квадраты
+      ctx.fillStyle = 'red';
+      ctx.fillRect(squareX, squareY, squareSize, squareSize);
+      ctx.fillStyle = 'green';
+      ctx.fillRect(targetX, targetY, targetSize, targetSize);
+
+      // Нарисовать счет
+      ctx.font = '20px Arial';
+      ctx.fillStyle = 'black';
+      ctx.fillText('Счет: ' + score, 10, 30);
+
+      // Обновить позицию цели
+      if (targetX > squareX) {
+        targetX -= 1;
+      } else {
+        targetX += 1;
+      }
+      if (targetY > squareY) {
+        targetY -= 1;
+      } else {
+        targetY += 1;
+      }
+
+      // Проверить столкновение
+      if (targetX < squareX + squareSize &&
+        targetX + targetSize > squareX &&
+        targetY < squareY + squareSize &&
+        targetY + targetSize > squareY) {
+        score++;
+        targetX = Math.random() * (canvas.width - squareSize);
+        targetY = Math.random() * (canvas.height - squareSize);
+      }
+    }
+
+    function handleKeyDown(event) {
+      if (event.key === 'ArrowLeft') {
+        squareX -= 10;
+      } else if (event.key === 'ArrowRight') {
+        squareX += 10;
+      } else if (event.key === 'ArrowUp') {
+        squareY -= 10;
+      } else if (event.key === 'ArrowDown') {
+        squareY += 10;
+      }
+    }
+
+    setInterval(draw, 10);
+    document.addEventListener('keydown', handleKeyDown);
+  </script>
+</body>
+
+</html>

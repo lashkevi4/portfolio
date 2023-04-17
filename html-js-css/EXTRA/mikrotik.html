@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Управление доступом в Интернет</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    // Функция для включения доступа в Интернет
+    function enableInternetAccess() {
+      $.get("http://192.168.0.1:8728/ip/hotspot/active/disableall", function (data) {
+        alert("Доступ в Интернет включен!");
+      });
+    }
+
+    // Функция для выключения доступа в Интернет
+    function disableInternetAccess() {
+      $.get("http://192.168.0.1:8728/ip/hotspot/active/enableall", function (data) {
+        alert("Доступ в Интернет выключен!");
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Управление доступом в Интернет</h1>
+  <button onclick="enableInternetAccess()">Включить доступ в Интернет</button>
+  <button onclick="disableInternetAccess()">Выключить доступ в Интернет</button>
+</body>
+
+</html>

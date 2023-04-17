@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Пример JavaScript: Слайдер изображений</title>
+  <style>
+    .slider {
+      position: relative;
+      width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .slider img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slider img.active {
+      opacity: 1;
+    }
+
+    .slider .controls {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .slider .controls button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slider">
+    <img src="https://picsum.photos/id/1002/500/300" class="active">
+    <img src="https://picsum.photos/id/1015/500/300">
+    <img src="https://picsum.photos/id/1024/500/300">
+    <div class="controls">
+      <button onclick="prevSlide()">Назад</button>
+      <button onclick="nextSlide()">Вперед</button>
+    </div>
+  </div>
+  <script>
+    var slideIndex = 0;
+    showSlide(slideIndex);
+
+    function nextSlide() {
+      slideIndex++;
+      showSlide(slideIndex);
+    }
+
+    function prevSlide() {
+      slideIndex--;
+      showSlide(slideIndex);
+    }
+
+    function showSlide(index) {
+      var slides = document.getElementsByTagName("img");
+      if (index < 0) {
+        slideIndex = slides.length - 1;
+      }
+      if (index >= slides.length) {
+        slideIndex = 0;
+      }
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      slides[slideIndex].classList.add("active");
+    }
+  </script>
+</body>
+
+</html>

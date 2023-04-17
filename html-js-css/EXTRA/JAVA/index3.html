@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Пример JavaScript: Интерактивная кнопка</title>
+  <style>
+    body {
+      background-color: #fff;
+      transition: background-color 1s ease-in-out;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <button onclick="changeColor()">Нажми меня!</button>
+  <script>
+    function changeColor() {
+      document.body.style.backgroundColor = "#f00";
+    }
+  </script>
+</body>
+
+</html>
