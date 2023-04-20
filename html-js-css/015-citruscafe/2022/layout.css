@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+    font-weight: 200;
+}
+
+section h2 {
+    font-weight: 500;
+    font-size: 32px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+}
+
+.wrapper {
+    background-color: rgb(115, 183, 73);
+    height: fit-content;
+    width: fit-content;
+    outline: 1px solid red;
+    padding: 0;
+}
+
+.container {
+    background-color: rgb(115, 183, 73);
+    outline: 1px solid blue;
+    padding: 10px;
+}
+
+nav {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+li {
+    border: 2px solid rgb(83, 126, 51);
+    flex-grow: 1;
+    flex-basis: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px 10px 10px 10px;
+    font-size: large;
+}
+
+section {
+    display: flex;
+    border: 10px solid white;
+}
+
+.section-left {
+    display: flex;
+    border: 0px;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+.section-right {
+    border: 0px;
+}
+
+.section-right img {
+    width: 100%;
+}
+
+article {
+    justify-content: flex-start;
+    display: flex;
+    background-color: white;
+    flex-grow: 1;
+    flex-basis: 100%;
+    border: 0px;
+    margin-top: 10px;
+}
+
+article img {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.art-1,
+.art-2,
+.art-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 10px solid white;
+    margin-top: 0px;
+    /*outline: 1px solid red;*/
+}
+
+.art-2 {
+    border-left: none;
+    border-right: none;
+}
+
+.art-1 h3,
+.art-2 h3,
+.art-3 h3 {
+    background-color: #c0bfbf;
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.art-3 {
+    justify-content: flex-start;
+}
+
+.art-3 table {
+    font-size: 16px;
+}
+
+footer {
+    background-color: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.foot-1 h4 {
+    color: white;
+    margin: 0;
+}
+
+.foot-1 h3 {
+    margin: 0;
+}
+
+.foot-2 {
+    color: white;
+    font-size: 30px;
+}
+
+@media screen and (max-width:769px) {
+    article {
+        flex-wrap: wrap;
+        background-color: rgb(115, 183, 73);
+    }
+
+    .art-1,
+    .art-2 {
+        flex-basis: 40%;
+        background-color: white;
+    }
+
+    .art-2 {
+        border-right: 10px solid white;
+    }
+
+    .art-3 {
+        background-color: white;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:426px) {
+    ul {
+        flex-direction: column;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    section {
+        border: none;
+    }
+
+    .section-right {
+        display: none;
+    }
+
+    .section-left {
+        background-color: rgb(115, 183, 73);
+    }
+
+    .art-1,
+    .art-2,
+    .art-3 {
+        flex-basis: 100%;
+        background-color: white;
+    }
+
+    .art-2 {
+        margin: 10px 0;
+        border-left: 10px solid white;
+    }
+
+    .art-3 {
+        margin-top: 0;
+    }
+
+    article {
+        background-color: rgb(115, 183, 73);
+    }
+}
