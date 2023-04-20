@@ -17,8 +17,11 @@ html {
 /* ---------------- Стили для смартфонов ---------------- */
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--main-bg-color);
+    background-color: rgb(115, 183, 73);
+}
 
+* {
+    box-sizing: border-box;
 }
 
 header img {
@@ -80,6 +83,88 @@ nav a:hover {
     background-color: green;
     /* Изменяем цвет фона для ссылок при наведении */
 }
+
+section maincontent {
+    width: 100%;
+    /* Ширина во весь экран */
+
+    max-width: 100%;
+    /* Ограничиваем максимальную ширину */
+
+    color: black;
+
+    text-align: center;
+    /* Выравнивание текста по центру */
+}
+
+
+#vision {
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.text h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+#vision .figure {
+    display: none;
+    /* выключаем отображение определенной фотографии*/
+}
+
+
+#specials h3 {
+    color: black;
+    font-size: 2.8rem;
+    border: solid white 1.3rem;
+    background-color: lightgray;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.special-box {
+    /* Делаем фигуру и картинку блочными элементами, чтобы они располагались на одной строке */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    /* Рамка вокруг контейнера */
+}
+
+#specials img {
+    /* border: solid white 1rem; */
+    width: 100%;
+    /* Ширина во весь экран */
+
+    max-width: 100%;
+    /* Ограничиваем максимальную ширину */
+
+    margin-top: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+
+    width: calc(100% - 2.1rem);
+    /* Учитываем отступы слева и справа */
+
+}
+
+#specials {
+    background-color: white;
+}
+
+
+
+
+
+
+
 
 
 
