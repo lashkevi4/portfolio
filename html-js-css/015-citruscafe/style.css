@@ -58,7 +58,7 @@ nav a {
 
     border: solid white .1rem;
 
-    transition: background-color 2.3s;
+    transition: background-color 0.3s;
     /* Добавляем плавный переход цвета фона при наведении на ссылки */
 
     text-align: center;
