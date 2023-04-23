@@ -22,7 +22,7 @@ header img {
     margin-top: 1rem;
 }
 
-/* Стили для элементов списка в навигационном меню */
+
 nav li {
     width: 100%;
     /* Задаем ширину элемента списка равной 100% для размещения ссылок друг под другом на мобильных устройствах */
@@ -98,7 +98,9 @@ section maincontent {
 }
 
 
-#specials h3 {
+#specials h3,
+#events h3,
+#news h3 {
     color: black;
     font-size: 2.8rem;
     border: solid white 1.3rem;
@@ -111,17 +113,9 @@ section maincontent {
     width: 100%;
 }
 
-.special-box {
-    /* Делаем фигуру и картинку блочными элементами, чтобы они располагались на одной строке */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: lightgray;
-    /* Рамка вокруг контейнера */
-}
-
-#specials img {
-    /* border: solid white 1rem; */
+#specials img,
+#events img,
+#news img {
     width: 100%;
     /* Ширина во весь экран */
 
@@ -137,13 +131,53 @@ section maincontent {
     width: calc(100% - 2.1rem);
     /* Учитываем отступы слева и справа */
 
+    background-color: white;
+
 }
 
-#specials {
+.special-box {
+    /* Делаем фигуру и картинку блочными элементами, чтобы они располагались на одной строке */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    /* Рамка вокруг контейнера */
+}
+
+#specials,
+#events,
+#news {
     background-color: white;
 }
 
+#events,
+#news {
+    border-top: solid rgb(115, 183, 73) 1rem;
+}
 
+#news {
+    border-bottom: solid rgb(115, 183, 73)1rem;
+    padding-bottom: 1rem;
+}
+
+#news table td {
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 2rem;
+}
+
+footer {
+    text-align: left;
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: white;
+}
+
+footer h4 {
+    color: black;
+    margin-bottom: 1rem;
+}
 
 
 
