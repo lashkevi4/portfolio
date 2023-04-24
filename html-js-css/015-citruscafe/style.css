@@ -167,25 +167,37 @@ section maincontent {
     padding-left: 2rem;
 }
 
-footer {
-    text-align: left;
+footer .first-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-left: 2rem;
+    margin-right: 2rem;
     font-size: 2rem;
     color: white;
 }
 
-footer h4 {
-    color: black;
-    margin-bottom: 1rem;
+
+.first-line span {
+    flex-grow: 1;
 }
 
+.first-line i {
+    margin-left: 1rem;
+}
 
+.second-line {
+    color: white;
+    margin-left: 2rem;
+    font-size: 2rem;
+}
 
-
-
-
-
-
+.third-line {
+    color: black;
+    margin-left: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
 
 /* ---------------- Стили для планшетов ---------------- */
 @media (min-width: 768px) {
