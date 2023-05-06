@@ -1,0 +1,59 @@
+.special-box {
+  /* Делаем фигуру и картинку блочными элементами, чтобы они располагались на одной строке */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  /* Рамка вокруг контейнера */
+}
+
+
+
+#events,
+#news {
+  border-top: solid rgb(115, 183, 73) 1rem;
+}
+
+#news {
+  border-bottom: solid rgb(115, 183, 73)1rem;
+  padding-bottom: 1rem;
+}
+
+#news table td {
+  font-size: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 2rem;
+}
+
+footer .first-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.first-line span {
+  flex-grow: 1;
+}
+
+.first-line i {
+  margin-left: 1rem;
+}
+
+.second-line {
+  color: white;
+  margin-left: 2rem;
+  font-size: 2rem;
+}
+
+.third-line {
+  color: black;
+  margin-left: 2rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+}
