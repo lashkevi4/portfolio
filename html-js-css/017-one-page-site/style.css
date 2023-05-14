@@ -19,6 +19,8 @@ nav {
     justify-content: space-between;
 }
 
+
+
 .left-aside {
     width: 30%;
     margin-left: 4rem;
@@ -282,6 +284,7 @@ ol {
     padding-left: 7rem;
     padding-right: 7rem;
     margin-top: 4rem;
+    justify-content: center;
 
 }
 
