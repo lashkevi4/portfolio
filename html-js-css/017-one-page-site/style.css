@@ -17,6 +17,10 @@ nav {
     color: white;
     display: flex;
     justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 
@@ -25,8 +29,8 @@ nav {
     width: 30%;
     margin-left: 4rem;
     text-align: left;
-    margin-top: 7rem;
-    margin-bottom: 7rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .right-aside {
@@ -80,7 +84,7 @@ nav a {
     /* Позиция элемента относительно нижнего края родительского элемента с position: relative */
     width: 80%;
     /* Задает ширину элемента равной 70% ширины родительского элемента */
-    height: 85%;
+    height: 80%;
     /* Задает высоту элемента равной 70% высоты родительского элемента */
     background-color: rgba(0, 0, 0, 0.5);
     /* Устанавливает полупрозрачный черный фон (50% прозрачности) */
@@ -96,7 +100,7 @@ nav a {
     /* Выравнивает содержимое гибкого контейнера по центру по горизонтали */
     gap: 4rem;
     /* Задает расстояние между дочерними элементами гибкого контейнера */
-    padding: 10rem;
+    padding: 3rem;
     /* Задает внутренние отступы элемента */
     margin: auto;
     /* Выравнивает элемент по центру родительского элемента с position: relative */
@@ -306,8 +310,6 @@ ol {
     margin-right: 0;
     padding: 0;
 }
-
-
 
 button[type="submit"] {
     background-color: rgb(205, 156, 1);
