@@ -8,8 +8,6 @@
   padding: 1em;
 }
 
-.clearfix {}
-
 .clearfix:after {
   visibility: hidden;
   display: block;
