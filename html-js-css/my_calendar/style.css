@@ -1,101 +1,49 @@
+html,
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  height: 100%;
+  width: 100%;
+  background-color: lightgray;
 }
 
-.container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.header img {
-  margin-right: 10px;
-  width: 24px;
-  height: 24px;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: bold;
-}
 
 .calendar {
-  background-color: #ffffff;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 1px solid #dddddd;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto auto repeat(6, 1fr);
 }
 
-.month {
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 10px;
+.top-row {
+  grid-column: 1 / 8;
+  display: grid;
+  grid-template-columns: 15% 15% 40% 15% 15%;
+  align-items: center;
+  justify-items: center;
+  font-size: 25px;
+  font-weight: 800;
+  padding: 15px;
 }
 
-.controls {
+.weekday-row {
+  grid-column: 1 / 8;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.date-grid {
+  grid-column: 1 / 8;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.date-cell {
+  border: 1px solid darkgray;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px;
-}
-
-.controls .prev-month,
-.controls .next-month {
-  cursor: pointer;
-}
-
-.weekdays {
-  display: flex;
-  justify-content: space-between;
-  background-color: #eeeeee;
-  padding: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.weekdays .weekday {
-  width: calc(100% / 7);
-  text-align: center;
-  color: #fdd835;
-}
-
-.days {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto auto;
-  gap: 5px;
-  padding: 5px;
-  flex-grow: 1;
-  overflow-y: auto;
-  max-height: 100%;
-}
-
-.day {
-  text-align: center;
-  padding: 5px;
-  background-color: #f5f5f5;
-  color: #000000;
-}
-
-.current-month-day {
-  background-color: #f5f5f5;
-}
-
-.current-day {
-  border: 2px solid #ff0000;
 }
