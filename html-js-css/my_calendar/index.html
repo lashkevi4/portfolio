@@ -1,96 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Calendar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    section {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+      /* Это очень важно для корректной работы flexbox с overflow */
+    }
+
+    article {
+      flex: 1;
+      border: 1px solid black;
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 0;
+      /* Это очень важно для корректной работы flexbox с overflow */
+    }
+
+    .content {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      word-wrap: break-word;
+    }
+  </style>
 </head>
 
-
 <body>
-
-  <section class="calendar">
-
-    <article class="top-row">
-      <span></span>
-      <button>&lt;</button>
-      <h1>December 2023</h1>
-      <button>&gt;</button>
-      <span></span>
+  <section>
+    <article>
+      <div class="content">Пн</div>
     </article>
-
-    <article class="weekday-row">
-      <span>Mon</span>
-      <span>Tue</span>
-      <span>Wed</span>
-      <span>Thu</span>
-      <span>Fri</span>
-      <span>Sat</span>
-      <span>Sun</span>
+    <article>
+      <div class="content">Вт</div>
     </article>
-
-    <article class="date-grid">
-      <span class="date-cell">1</span>
-      <span class="date-cell">2</span>
-      <span class="date-cell">3</span>
-      <span class="date-cell">4</span>
-      <span class="date-cell">5</span>
-      <span class="date-cell">6</span>
-      <span class="date-cell">7</span>
-      <span class="date-cell">8</span>
-      <span class="date-cell">9</span>
-      <span class="date-cell">10</span>
-      <span class="date-cell">11</span>
-      <span class="date-cell">12</span>
-      <span class="date-cell">13</span>
-      <span class="date-cell">14</span>
-      <span class="date-cell">15</span>
-      <span class="date-cell">16</span>
-      <span class="date-cell">17</span>
-      <span class="date-cell">18</span>
-      <span class="date-cell">19</span>
-      <span class="date-cell">20</span>
-      <span class="date-cell">21</span>
-      <span class="date-cell">22</span>
-      <span class="date-cell">23</span>
-      <span class="date-cell">24</span>
-      <span class="date-cell">25</span>
-      <span class="date-cell">26</span>
-      <span class="date-cell">27</span>
-      <span class="date-cell">28</span>
-      <span class="date-cell">29</span>
-      <span class="date-cell">30</span>
-      <span class="date-cell"></span>
-      <span class="date-cell"></span>
-      <span class="date-cell"></span>
-      <span class="date-cell"></span>
-      <span class="date-cell"></span>
-      <span class="date-cell"></span>
-      <span class="date-cell"></span>
-      <span class="date-cell"></span>
-      <span class="date-cell"></span>
-      <span class="date-cell"></span>
-      <span class="date-cell"></span>
-      <span class="date-cell"></span>
+    <article>
+      <div class="content">Ср</div>
     </article>
-
-    <script>
-      const dateGrid = document.getElementById('date-grid');
-      for (let i = 1; i <= 42; i++) {
-        const span = document.createElement('span');
-        span.className = 'date-cell';
-        if (i <= 31) {
-          span.textContent = i;
-        }
-        dateGrid.appendChild(span);
-      }
-    </script>
-
+    <article>
+      <div class="content">Чт</div>
+    </article>
+    <article>
+      <div class="content">Пт</div>
+    </article>
+    <article>
+      <div class="content">Сб</div>
+    </article>
+    <article>
+      <div class="content">Вс</div>
+    </article>
   </section>
+
+  <!-- Здесь следуют остальные строки таблицы -->
+
+  <section>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+  </section>
+
+  <section>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+  </section>
+
+  <section>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+  </section>
+
+  <section>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+  </section>
+
+  <section>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+  </section>
+
+  <section>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content">Ячейка</div>
+    </article>
+    <article>
+      <div class="content"> Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка
+        Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка
+        Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка
+        Ячейка</div>
+    </article>
+  </section>
+
 </body>
 
 </html>
