@@ -16,8 +16,18 @@
     section {
       display: flex;
       flex: 1;
+      /* Это значение будет переопределено для .head и .days */
       min-height: 0;
-      /* Это очень важно для корректной работы flexbox с overflow */
+    }
+
+    .head {
+      flex: 0.74;
+      /* 8% от 12.5% */
+    }
+
+    .days {
+      flex: 0.26;
+      /* 4.5% от 12.5% */
     }
 
     article {
@@ -29,10 +39,9 @@
       align-items: center;
       justify-content: center;
       min-height: 0;
-      /* Это очень важно для корректной работы flexbox с overflow */
     }
 
-    .content {
+    .dates {
       width: 100%;
       height: 100%;
       overflow: hidden;
@@ -42,177 +51,100 @@
 </head>
 
 <body>
-  <section>
-    <article>
-      <div class="content">Пн</div>
-    </article>
-    <article>
-      <div class="content">Вт</div>
-    </article>
-    <article>
-      <div class="content">Ср</div>
-    </article>
-    <article>
-      <div class="content">Чт</div>
-    </article>
-    <article>
-      <div class="content">Пт</div>
-    </article>
-    <article>
-      <div class="content">Сб</div>
-    </article>
-    <article>
-      <div class="content">Вс</div>
-    </article>
+
+  <section class="head">
+
+    <article>HOME</article>
+    <article>LEFT</article>
+    <article>SEPTEMBER 2023</article>
+    <article>RIGHT</article>
+    <article>INFO</article>
+
   </section>
 
-  <!-- Здесь следуют остальные строки таблицы -->
+  <section class="days">
 
-  <section>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
+    <article>Пн</article>
+    <article>Вт</article>
+    <article>Ср</article>
+    <article>Чт</article>
+    <article>Пт</article>
+    <article>Сб</article>
+    <article>Вс</article>
+
   </section>
 
-  <section>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
+
+  <section class="dates" id="datesSection">
+
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+
   </section>
 
-  <section>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
+  <section class="dates" id="datesSection">
+
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+
   </section>
 
-  <section>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
+  <section class="dates" id="datesSection">
+
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+
   </section>
 
-  <section>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
+  <section class="dates" id="datesSection">
+
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+
   </section>
 
-  <section>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content">Ячейка</div>
-    </article>
-    <article>
-      <div class="content"> Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка
-        Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка
-        Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка Ячейка
-        Ячейка</div>
-    </article>
+  <section class="dates" id="datesSection">
+
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+
+  </section>
+
+  <section class="dates" id="datesSection">
+
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+    <article>55</article>
+
   </section>
 
 </body>
