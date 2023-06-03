@@ -5,7 +5,6 @@ body {
   padding: 5px;
   display: flex;
   flex-direction: column;
-  background-color: #d3d0da;
 }
 
 section {
@@ -18,7 +17,6 @@ section {
 .head {
   flex: 0.74;
   /* 8% от 12.5% */
-  margin-bottom: 5px;
 }
 
 .head img {
@@ -77,13 +75,4 @@ article {
 
 .dates:last-of-type article:last-child {
   border-bottom-right-radius: 10px;
-}
-
-.days article:nth-child(-n+5) {
-  color: blue;
-  background-color: ;
-}
-
-.days article:nth-child(n+6) {
-  color: red;
 }
