@@ -17,7 +17,11 @@ section {
 .head {
   flex: 0.74;
   /* 8% от 12.5% */
+}
 
+.head img {
+  width: 50px;
+  height: 50px;
 }
 
 .days {
