@@ -15,36 +15,62 @@ section {
   min-height: 0;
 }
 
-.head {
+.nav {
   flex: 0.74;
   /* 8% от 12.5% */
   margin-bottom: 5px;
   background-color: #d3d0da;
 }
 
-.head img {
+.nav article {
+  font-weight: 700;
+  border: solid #d3d0da 1px;
+}
+
+.nav img {
   width: 25px;
   height: 25px;
   border: solid 2px #d3d0da;
 }
 
-.head img:hover {
+.nav img:hover {
   background-color: #d28f1b;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
+  border: solid grey 2px;
 }
 
 .days {
   flex: 0.26;
   /* 4.5% от 12.5% */
   font-weight: 700;
-  border: 2px solid grey;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  border: 2px solid grey;
   border-bottom: 0;
+  overflow: hidden;
 }
 
+span {
+  flex: 1;
+  border: 1px solid grey;
+  border-top: none;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
 
+.days span:nth-child(-n+5) {
+  color: blue;
+}
+
+.days span:nth-child(n+6) {
+  color: red;
+  background-color: #b5b3be;
+}
 
 article {
   flex: 1;
@@ -55,11 +81,6 @@ article {
   align-items: center;
   justify-content: center;
   min-height: 0;
-}
-
-.head article {
-  font-weight: 700;
-  border: solid #d3d0da 1px;
 }
 
 .dates {
@@ -88,15 +109,6 @@ article {
   border-bottom-right-radius: 10px;
 }
 
-.days article:nth-child(-n+5) {
-  color: blue;
-}
-
-.days article:nth-child(n+6) {
-  color: red;
-  background-color: #b5b3be;
-}
-
 .dates article:nth-child(n+6) {
   background-color: #bcbac7;
 }
@@ -104,3 +116,20 @@ article {
 .dates article:nth-child(n+6):hover {
   background-color: #d28f1b;
 }
+
+.dates article:first-child {
+  border-left: solid grey 2.5px;
+}
+
+.dates article:last-child {
+  border-right: 2.5px solid grey;
+}
+
+.dates:last-of-type article {
+  border-bottom: 2px solid grey;
+}
+
+
+/* .dates article:last-child {
+  border-left: solid grey 2.5px;
+} */
