@@ -8,6 +8,21 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
   <title>Calendar</title>
+
+  <script>
+    // Функция для определения разрешения экрана и вывода информации
+    function showResolution() {
+      var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+      var resolutionElement = document.getElementById("resolution");
+      resolutionElement.textContent = "Экран: " + width + "x" + height;
+    }
+
+    // Вызов функции при загрузке страницы
+    window.onload = showResolution;
+  </script>
+
 </head>
 
 <body>
@@ -16,7 +31,9 @@
 
     <article><img src="./img/home.png" alt="Home"></article>
     <article><img src="./img/left.png" alt="Left"></article>
-    <article>SEPTEMBER<br>2023</article>
+    <article>
+      <h1 id="resolution"></h1>
+    </article>
     <article><img src="./img/right.png" alt="Right"></article>
     <article><img src="./img/info.png" alt="Info"></article>
 
