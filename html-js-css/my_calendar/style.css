@@ -146,4 +146,10 @@ article {
     border-radius: 10px;
     border: solid grey 2px;
   }
+
+
+  span {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
