@@ -147,9 +147,11 @@ article {
     border: solid grey 2px;
   }
 
+  .days {
+    flex: 0.36;
+  }
 
   span {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    background-color: red;
   }
 }
