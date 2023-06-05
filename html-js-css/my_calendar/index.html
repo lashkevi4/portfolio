@@ -8,21 +8,6 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
   <title>Calendar</title>
-
-  <script>
-    // Функция для определения разрешения экрана и вывода информации
-    function showResolution() {
-      var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-
-      var resolutionElement = document.getElementById("resolution");
-      resolutionElement.textContent = "Экран: " + width + "x" + height;
-    }
-
-    // Вызов функции при загрузке страницы
-    window.onload = showResolution;
-  </script>
-
 </head>
 
 <body>
@@ -30,11 +15,11 @@
   <section class="nav">
 
     <article><img src="./img/home.png" alt="Home"></article>
-    <article><img src="./img/left.png" alt="Left"></article>
-    <article>
-      <h1 id="resolution"></h1>
-    </article>
-    <article><img src="./img/right.png" alt="Right"></article>
+    <article id="prevMonth"><img src="./img/left.png" alt="Left"></article>
+
+    <article id="currentMonthDisplay"></article>
+    <article id="nextMonth"><img src="./img/right.png" alt="Right"></article>
+
     <article><img src="./img/info.png" alt="Info"></article>
 
   </section>
@@ -52,77 +37,67 @@
   </section>
 
 
-  <section class="dates" id="datesSection">
-
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-
+  <section class="dates" id="week1">
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
   </section>
 
-  <section class="dates" id="datesSection">
-
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-
+  <section class="dates" id="week2">
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
   </section>
 
-  <section class="dates" id="datesSection">
-
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-
+  <section class="dates" id="week3">
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
   </section>
 
-  <section class="dates" id="datesSection">
-
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-
+  <section class="dates" id="week4">
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
   </section>
 
-  <section class="dates" id="datesSection">
-
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-
+  <section class="dates" id="week5">
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
   </section>
 
-  <section class="dates" id="datesSection">
-
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-    <article>55</article>
-
+  <section class="dates" id="week6">
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
   </section>
+
+  <script src="./js/script.js"></script>
 
 </body>
 

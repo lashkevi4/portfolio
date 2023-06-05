@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Определение разрешения экрана</title>
+  <script>
+    // Функция для определения разрешения экрана и вывода информации
+    function showResolution() {
+      var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+      var resolutionElement = document.getElementById("resolution");
+      resolutionElement.textContent = "Разрешение экрана: " + width + "x" + height;
+    }
+
+    // Вызов функции при загрузке страницы
+    window.onload = showResolution;
+  </script>
+</head>
+
+<body>
+  <h1 id="resolution"></h1>
+</body>
+
+</html>

@@ -1,67 +1,46 @@
-let nowDate = new Date(),
-  nowDateNumber = nowDate.getDate(),
-  nowMonth = nowDate.getMonth(),
-  nowYear = nowDate.getFullYear(),
-  container = document.getElementById('month-calendar'),
-  monthContainer = container.getElementsByClassName('month-name')[0],
-  yearContainer = container.getElementsByClassName('year-name')[0],
-  daysContainer = container.getElementsByClassName('days')[0],
-  prev = container.getElementsByClassName('prev')[0],
-  next = container.getElementsByClassName('next')[0],
-  monthName = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
+// Получаем текущую дату
+let currentDay = new Date();
 
+// Массив с названиями месяцев
+let monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+let currentMonthName = monthNames[currentDay.getMonth()];
 
+// Получаем ссылки на каждую секцию недели в HTML
+let week1 = document.getElementById('week1');
+let week2 = document.getElementById('week2');
+let week3 = document.getElementById('week3');
+let week4 = document.getElementById('week4');
+let week5 = document.getElementById('week5');
+let week6 = document.getElementById('week6');
 
-let curDate = nowDate.setMonth(nowDate.getMonth() - 1);
-console.log(nowDate.getFullYear());
+function fillCalendar(daysInMonth, firstDayOfMonth) {
+  let dayCounter = 1;
+  let week = [week1, week2, week3, week4, week5, week6];
 
-function setMonthCalendar(year, month) {
-  let monthDays = new Date(year, month + 1, 0).getDate(),
-    monthPrefix = new Date(year, month, 0).getDay(),
-    monthDaysText = '';
-
-  monthContainer.textContent = monthName[month];
-  yearContainer.textContent = year;
-  daysContainer.innerHTML = '';
-
-  if (monthPrefix > 0) {
-    for (let i = 1; i <= monthPrefix; i++) {
-      monthDaysText += '<li></li>';
+  for (let i = 0; i < 6; i++) {
+    for (let j = 0; j < 7; j++) {
+      if ((i === 0 && j < firstDayOfMonth) || dayCounter > daysInMonth) {
+        week[i].children[j].innerText = "";
+      } else {
+        week[i].children[j].innerText = dayCounter;
+        dayCounter++;
+      }
     }
   }
-
-  for (let i = 1; i <= monthDays; i++) {
-    monthDaysText += '<li>' + i + '</li>';
-  }
-
-  daysContainer.innerHTML = monthDaysText;
-
-  if (month == nowMonth && year == nowYear) {
-    days = daysContainer.getElementsByTagName('li');
-    days[monthPrefix + nowDateNumber - 1].classList.add('date-now');
-  }
 }
 
-setMonthCalendar(nowYear, nowMonth);
+fillCalendar(new Date(currentDay.getFullYear(), currentDay.getMonth() + 1, 0).getDate(), new Date(currentDay.getFullYear(), currentDay.getMonth(), 1).getDay());
 
-prev.onclick = function () {
-  let curDate = new Date(yearContainer.textContent, monthName.indexOf(monthContainer.textContent));
+// Отображение текущего месяца и года
+document.getElementById('currentMonthDisplay').textContent = `${currentMonthName} ${currentDay.getFullYear()}`;
 
-  curDate.setMonth(curDate.getMonth() - 1);
-
-  let curYear = curDate.getFullYear(),
-    curMonth = curDate.getMonth();
-
-  setMonthCalendar(curYear, curMonth);
+function changeMonth(increment) {
+  currentDay.setMonth(currentDay.getMonth() + increment);
+  fillCalendar(new Date(currentDay.getFullYear(), currentDay.getMonth() + 1, 0).getDate(), new Date(currentDay.getFullYear(), currentDay.getMonth(), 1).getDay());
+  currentMonthName = monthNames[currentDay.getMonth()];
+  document.getElementById('currentMonthDisplay').textContent = `${currentMonthName} ${currentDay.getFullYear()}`;
 }
 
-next.onclick = function () {
-  let curDate = new Date(yearContainer.textContent, monthName.indexOf(monthContainer.textContent));
-
-  curDate.setMonth(curDate.getMonth() + 1);
-
-  let curYear = curDate.getFullYear(),
-    curMonth = curDate.getMonth();
-
-  setMonthCalendar(curYear, curMonth);
-}
+// Обработчики событий для кнопок навигации по месяцам
+document.getElementById('prevMonth').addEventListener('click', function () { changeMonth(-1); });
+document.getElementById('nextMonth').addEventListener('click', function () { changeMonth(1); });
