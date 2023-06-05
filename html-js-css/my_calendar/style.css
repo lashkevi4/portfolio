@@ -151,7 +151,22 @@ article {
 
   .nav {
     flex: 0.6;
-    margin-bottom: 5px;
+  }
+
+}
+
+@media (min-width : 800px) {
+
+  .nav img:hover {
+    background-color: #d28f1b;
+    padding: 15px;
+    border-radius: 10px;
+    border: solid grey 2px;
+  }
+
+  .nav img {
+    width: 25px;
+    height: 25px;
   }
 
 }
