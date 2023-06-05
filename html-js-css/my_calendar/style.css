@@ -148,10 +148,7 @@ article {
   }
 
   .days {
-    flex: 0.36;
+    flex: 0.4;
   }
 
-  span {
-    background-color: red;
-  }
 }
