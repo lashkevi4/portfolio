@@ -149,4 +149,11 @@ article {
     flex: 0.4;
   }
 
+  .nav {
+    flex: 0.6;
+    /* 8% от 12.5% */
+    margin-bottom: 5px;
+    background-color: green;
+  }
+
 }
