@@ -140,7 +140,7 @@ article {
 
   .nav img:hover {
     background-color: #d28f1b;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
     border: solid grey 2px;
   }
@@ -151,9 +151,7 @@ article {
 
   .nav {
     flex: 0.6;
-    /* 8% от 12.5% */
     margin-bottom: 5px;
-    background-color: green;
   }
 
 }
