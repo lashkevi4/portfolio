@@ -23,8 +23,10 @@ function fillCalendar(daysInMonth, firstDayOfMonth) {
       if ((i === 0 && j < firstDayOfMonth) || dayCounter > daysInMonth) {
         week[i].children[j].innerText = "";
         week[i].children[j].classList.remove('current-day');  // Удаляем класс 'current-day', если он был присвоен
+        week[i].children[j].classList.remove('current-month');  // Удаляем класс 'current-month', если он был присвоен
       } else {
         week[i].children[j].innerText = dayCounter;
+        week[i].children[j].classList.add('current-month');  // Добавляем класс 'current-month', так как все эти даты принадлежат текущему месяцу
         // Если текущий месяц и год совпадают с отображаемыми в календаре, и текущий день совпадает с dayCounter, добавить класс "current-day"
         if (currentDay.getFullYear() === today.getFullYear() && currentDay.getMonth() === today.getMonth() && today.getDate() === dayCounter) {
           week[i].children[j].classList.add('current-day');
@@ -36,6 +38,7 @@ function fillCalendar(daysInMonth, firstDayOfMonth) {
     }
   }
 }
+
 
 
 let firstDay = new Date(currentDay.getFullYear(), currentDay.getMonth(), 1).getDay();
