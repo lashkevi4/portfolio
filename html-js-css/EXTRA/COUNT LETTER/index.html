@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Подсчет символов</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    #text-input {
+      width: 95%;
+      height: 85%;
+      overflow: auto;
+    }
+
+    #counter {
+      margin-top: 20px;
+      font-size: 25px;
+      font-weight: 700;
+    }
+  </style>
+  <script>
+    function updateCount() {
+      var textInput = document.getElementById('text-input');
+      var counter = document.getElementById('counter');
+      counter.innerHTML = "Введено символов: " + textInput.value.length;
+    }
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <p id="counter">Введено символов: 0</p>
+    <textarea id="text-input" oninput="updateCount()"></textarea>
+  </div>
+</body>
+
+</html>
