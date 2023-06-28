@@ -71,9 +71,58 @@ document.getElementById('prevMonth').addEventListener('click', function () { cha
 document.getElementById('nextMonth').addEventListener('click', function () { changeMonth(1); });
 
 // 9. Обработчик событий для закрытия модального окна
-// Предполагается, что в вашем HTML есть элементы с идентификаторами 'close' и 'modal'
-var close = document.getElementById('close');
-close.addEventListener('click', function () {
+var modal = document.getElementById('modal');
+
+// 10. Получаем ссылки на кнопки в модальном окне
+var saveBtn = document.getElementById('save-event');
+var cancelBtn = document.getElementById('cancel');
+
+// 11. Добавляем обработчик событий для кнопки 'Сохранить'
+saveBtn.addEventListener('click', function () {
+  console.log('Save button clicked');
   modal.style.display = "none";
 });
 
+
+// 12. Добавляем обработчик событий для кнопки 'Отмена'
+cancelBtn.addEventListener('click', function () {
+  console.log('Cancel button clicked');
+  modal.style.display = "none";
+});
+
+
+// 13. Динамически заполняем промежутки времени в селекторе времени
+var eventList = document.getElementById('event-list');
+
+for (let i = 8; i < 20; i++) {
+  let eventItem = document.createElement('label');
+  eventItem.classList.add('event-item');
+
+  let time = document.createElement('time');
+  let timeText = i < 10 ? '0' + i : i;
+  let nextTimeText = i + 1 < 10 ? '0' + (i + 1) : i + 1;
+  time.textContent = `${timeText}:00 - ${nextTimeText}:00`;
+  time.classList.add('event-time');
+
+  let input = document.createElement('input');
+  input.type = 'text';
+  input.classList.add('event-input');
+
+  eventItem.appendChild(time);
+  eventItem.appendChild(input);
+
+  eventList.appendChild(eventItem);
+}
+
+// 14. Добавляем обработчики событий для выбора даты
+let days = document.querySelectorAll('.day');
+
+days.forEach(day => {
+  day.addEventListener('click', function () {
+    // Обновляем номер выбранного дня
+    document.getElementById('selectedDay').textContent = day.textContent;
+
+    // Отображаем модальное окно
+    modal.style.display = "block";
+  });
+});
