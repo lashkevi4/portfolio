@@ -1,6 +1,3 @@
-var database; // Объявляем переменную на глобальном уровне
-
-
 window.onload = function () {
   // Инициализация Firebase
   var firebaseConfig = {
@@ -17,7 +14,7 @@ window.onload = function () {
   firebase.initializeApp(firebaseConfig);
 
   // Get a reference to the database
-  database = firebase.database(); // Присваиваем базу данных переменной, которую мы объявили ранее
+  var database = firebase.database();
 }
 
 // 0. Задаем функции
@@ -25,70 +22,52 @@ function openModal() {
   modal.style.display = "block";
 }
 
-
-function resetModal() {
-  console.log("resetModal called"); // Добавьте эту строку
-
-  // Получаем все элементы ввода в модальном окне
-  var eventInputs = document.querySelectorAll('.event-input');
-
-  // Очищаем каждое поле ввода
-  eventInputs.forEach(input => {
-    input.value = '';
-  });
-}
-
-
 function closeModal() {
   modal.style.display = "none";
 }
 
-
 function saveEvent() {
-  console.log('saveEvent called');  // новая строка
-
+  // Обрабатываем выбранный день
   const selectedDay = document.getElementById('selectedDay').textContent;
+  console.log(`Selected day is: ${selectedDay}`);
+
   const eventItems = document.querySelectorAll('.event-item');
 
   eventItems.forEach((eventItem, i) => {
     const timeSlot = eventItem.children[0].textContent;
     const eventDescription = eventItem.children[1].value;
+    console.log(`Event ${i}: ${timeSlot}, ${eventDescription}`);
 
-    const path = 'events/' + currentDay.getFullYear() + '/' + (currentDay.getMonth() + 1) + '/' + selectedDay + '/' + i;
-    const eventRef = database.ref(path);
-
-    if (eventDescription && eventDescription.trim() !== '') {
+    if (eventDescription) {
+      const eventRef = database.ref('events/' + currentDay.getFullYear() + '/' + (currentDay.getMonth() + 1) + '/' + selectedDay + '/' + i);
       eventRef.set({
         timeSlot: timeSlot,
         description: eventDescription
       })
-        .then(() => console.log('Данные успешно записаны в: ', path))
-        .catch((error) => console.log('Ошибка при записи данных: ', error, 'Не удалось записать данные в: ', path));
-    } else {
-      eventRef.remove()
-        .then(() => console.log('Данные успешно удалены из: ', path))
-        .catch((error) => console.log('Ошибка при удалении данных: ', error, 'Не удалось удалить данные из: ', path));
+        .then(() => console.log('Data written successfully'))
+        .catch((error) => console.log('Error writing data: ', error));
     }
   });
 
-  console.log('saveEvent finished');  // новая строка
+  // Закрываем модальное окно
   closeModal();
 }
 
 function cancelEvent() {
   console.log('Cancel button clicked');
+  // Закрываем модальное окно
   closeModal();
 }
+
+
 
 
 // 1. Получаем текущую дату
 let currentDay = new Date();
 
-
 // 2. Массив с названиями месяцев
 let monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
 let currentMonthName = monthNames[currentDay.getMonth()];
-
 
 // 3. Получаем ссылки на каждую секцию недели в HTML
 let weeks = Array.from({ length: 6 }, (_, i) => document.getElementById(`week${i + 1}`));
@@ -127,15 +106,14 @@ function fillCalendar(daysInMonth, firstDayOfMonth) {
 }
 
 
+
 // 5. Вычисляем первый день месяца и заполняем календарь
 let firstDay = new Date(currentDay.getFullYear(), currentDay.getMonth(), 1).getDay();
 firstDay = firstDay === 0 ? 6 : firstDay - 1;
 fillCalendar(new Date(currentDay.getFullYear(), currentDay.getMonth() + 1, 0).getDate(), firstDay);
 
-
 // 6. Отображаем текущий месяц и год
 document.getElementById('currentMonthDisplay').textContent = `${currentMonthName} ${currentDay.getFullYear()}`;
-
 
 // 7. Функция для изменения месяца
 function changeMonth(increment) {
@@ -148,27 +126,52 @@ function changeMonth(increment) {
   document.getElementById('currentMonthDisplay').textContent = `${currentMonthName} ${currentDay.getFullYear()}`;
 }
 
-
 // 8. Обработчики событий для кнопок навигации по месяцам
 document.getElementById('prevMonth').addEventListener('click', function () { changeMonth(-1); });
 document.getElementById('nextMonth').addEventListener('click', function () { changeMonth(1); });
 
-
 // 9. Обработчик событий для закрытия модального окна
 var modal = document.getElementById('modal');
-
 
 // 10. Получаем ссылки на кнопки в модальном окне
 var saveBtn = document.getElementById('save-event');
 var cancelBtn = document.getElementById('cancel');
 
-
 // 11. Добавляем обработчик событий для кнопки 'Сохранить'
-saveBtn.addEventListener('click', saveEvent);
+saveBtn.addEventListener('click', saveEvent); {
+  console.log('Save button clicked');  // Старый log
+
+  // Обрабатываем выбранный день
+  var selectedDay = document.getElementById('selectedDay').textContent;
+  console.log(`Selected day is: ${selectedDay}`);  // Новый log
+
+  var eventItems = document.querySelectorAll('.event-item');
+
+  eventItems.forEach((eventItem, i) => {
+    var timeSlot = eventItem.children[0].textContent;
+    var eventDescription = eventItem.children[1].value;
+    console.log(`Event ${i}: ${timeSlot}, ${eventDescription}`);  // Новый log
+
+    if (eventDescription) {
+      var eventRef = database.ref('events/' + currentDay.getFullYear() + '/' + (currentDay.getMonth() + 1) + '/' + selectedDay + '/' + i);
+      eventRef.set({
+        timeSlot: timeSlot,
+        description: eventDescription
+      })
+        .then(() => console.log('Data written successfully'))  // Новый log
+        .catch((error) => console.log('Error writing data: ', error));  // Новый log
+    }
+  });
+
+  closeModal();
+};
 
 
 // 12. Добавляем обработчик событий для кнопки 'Отмена'
-cancelBtn.addEventListener('click', cancelEvent);
+cancelBtn.addEventListener('click', cancelEvent); {
+  console.log('Cancel button clicked');
+  closeModal();
+};
 
 
 // 13. Динамически заполняем промежутки времени в селекторе времени
@@ -179,11 +182,11 @@ for (let i = 8; i < 20; i++) {
   let nextTimeText = i + 1 < 10 ? '0' + (i + 1) : i + 1;
 
   eventList.innerHTML += `
-      <label class="event-item">
-        <time class="event-time">${timeText}:00 - ${nextTimeText}:00</time>
-        <input type="text" class="event-input">
-      </label>
-    `;
+    <label class="event-item">
+      <time class="event-time">${timeText}:00 - ${nextTimeText}:00</time>
+      <input type="text" class="event-input">
+    </label>
+  `;
 }
 
 
@@ -195,9 +198,6 @@ weeks.forEach(week => {
       // Обновляем выбранный номер дня
       document.getElementById('selectedDay').textContent = day.textContent;
 
-      // Сбрасываем модальное окно
-      resetModal();  // Добавлен вызов функции resetModal()
-
       // Получаем события для этого дня
       getEvents(currentDay.getFullYear(), currentDay.getMonth() + 1, parseInt(day.textContent));
 
@@ -208,7 +208,8 @@ weeks.forEach(week => {
 });
 
 
-// 15. Function to get the events for a given day
+
+// Function to get the events for a given day
 function getEvents(year, month, day) {
   let dayRef = database.ref(`events/${year}/${month}/${day}`);
 
@@ -220,20 +221,34 @@ function getEvents(year, month, day) {
 
     if (data) {
       // Заполняем модальное окно данными из Firebase
-      let eventItems = document.querySelectorAll('.event-item');
-
       for (let index in data) {
-        if (eventItems[index]) {
-          let eventDescription = eventItems[index].children[1];
-          if (eventDescription) {
-            eventDescription.value = data[index].description;
-          } else {
-            console.error('eventDescription is undefined or null');
-          }
+        let item = document.getElementById(`timeSlot${index}`);
+        if (item && item.children && item.children[1]) {
+          item.children[1].value = data[index].description;
         } else {
-          console.error(`eventItem at index ${index} is undefined or null`);
+          console.error('Item or its children are undefined or null');
         }
       }
     }
   });
 }
+
+
+// Function to clear the input fields in the modal window
+function resetModal() {
+  let eventInputs = document.querySelectorAll('.event-input');
+  eventInputs.forEach(input => {
+    input.value = '';
+  });
+}
+
+
+
+
+
+// let monthRef = database.ref('events/2023/7');
+
+// monthRef.once('value', (snapshot) => {
+//   const data = snapshot.val();
+//   console.log(data);
+// });

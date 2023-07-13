@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Firebase Test</title>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+</head>
+
+<body>
+  <button id="addButton">Добавить элемент</button>
+  <button id="deleteButton">Удалить элемент</button>
+
+  <script>
+    // Инициализация Firebase
+    var firebaseConfig = {
+      apiKey: "AIzaSyAnxFwT75ER7eH-t7AosrupsqBrr63iPtw",
+      authDomain: "finn-calendar.firebaseapp.com",
+      databaseURL: "https://finn-calendar-default-rtdb.firebaseio.com",
+      projectId: "finn-calendar",
+      storageBucket: "finn-calendar.appspot.com",
+      messagingSenderId: "247106375727",
+      appId: "1:247106375727:web:cc7ae66bc609d1d427b6da"
+    };
+
+    // Инициализация Firebase
+    firebase.initializeApp(firebaseConfig);
+    var database = firebase.database();
+
+    // Функция для добавления нового элемента в базу данных
+    function addData() {
+      var ref = database.ref('path/to/your/data');
+      var newData = {
+        name: "Test Name",
+        value: "Test Value"
+      };
+      ref.push(newData);
+    }
+
+    // Функция для удаления элемента из базы данных
+    function deleteData() {
+      var ref = database.ref('path/to/your/data');
+      ref.once("value")
+        .then(function (snapshot) {
+          snapshot.forEach(function (child) {
+            child.ref.remove()
+              .then(function () {
+                console.log("Удаление прошло успешно");
+              })
+              .catch(function (error) {
+                console.log("Удаление не удалось: " + error.message);
+              });
+          });
+        });
+    }
+
+    // Привязка функций к кнопкам
+    document.getElementById("addButton").addEventListener("click", addData);
+    document.getElementById("deleteButton").addEventListener("click", deleteData);
+  </script>
+</body>
+
+</html>
