@@ -1,8 +1,7 @@
 var database; // Объявляем переменную на глобальном уровне
 
-
+// Инициализация Firebase при загрузке страницы / Firebase Initialization on Page Load
 window.onload = function () {
-  // Инициализация Firebase
   var firebaseConfig = {
     apiKey: "AIzaSyAnxFwT75ER7eH-t7AosrupsqBrr63iPtw",
     authDomain: "finn-calendar.firebaseapp.com",
@@ -13,88 +12,13 @@ window.onload = function () {
     appId: "1:247106375727:web:cc7ae66bc609d1d427b6da"
   };
 
-  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  // Get a reference to the database
-  database = firebase.database(); // Присваиваем базу данных переменной, которую мы объявили ранее
-}
-
-// 0. Задаем функции
-function openModal() {
-  modal.style.display = "block";
+  database = firebase.database();
 }
 
 
-function resetModal() {
-  console.log("resetModal called"); // Добавьте эту строку
-
-  // Получаем все элементы ввода в модальном окне
-  var eventInputs = document.querySelectorAll('.event-input');
-
-  // Очищаем каждое поле ввода
-  eventInputs.forEach(input => {
-    input.value = '';
-  });
-}
-
-
-function closeModal() {
-  modal.style.display = "none";
-}
-
-
-function saveEvent() {
-  console.log('saveEvent called');  // новая строка
-
-  const selectedDay = document.getElementById('selectedDay').textContent;
-  const eventItems = document.querySelectorAll('.event-item');
-
-  eventItems.forEach((eventItem, i) => {
-    const timeSlot = eventItem.children[0].textContent;
-    const eventDescription = eventItem.children[1].value;
-
-    const path = 'events/' + currentDay.getFullYear() + '/' + (currentDay.getMonth() + 1) + '/' + selectedDay + '/' + i;
-    const eventRef = database.ref(path);
-
-    if (eventDescription && eventDescription.trim() !== '') {
-      eventRef.set({
-        timeSlot: timeSlot,
-        description: eventDescription
-      })
-        .then(() => console.log('Данные успешно записаны в: ', path))
-        .catch((error) => console.log('Ошибка при записи данных: ', error, 'Не удалось записать данные в: ', path));
-    } else {
-      eventRef.remove()
-        .then(() => console.log('Данные успешно удалены из: ', path))
-        .catch((error) => console.log('Ошибка при удалении данных: ', error, 'Не удалось удалить данные из: ', path));
-    }
-  });
-
-  console.log('saveEvent finished');  // новая строка
-  closeModal();
-}
-
-function cancelEvent() {
-  console.log('Cancel button clicked');
-  closeModal();
-}
-
-
-// 1. Получаем текущую дату
-let currentDay = new Date();
-
-
-// 2. Массив с названиями месяцев
-let monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-let currentMonthName = monthNames[currentDay.getMonth()];
-
-
-// 3. Получаем ссылки на каждую секцию недели в HTML
-let weeks = Array.from({ length: 6 }, (_, i) => document.getElementById(`week${i + 1}`));
-
-
-// 4. Функция для заполнения календаря
+// Заполнить Календарь Днями - fillCalendarWithDays
 function fillCalendar(daysInMonth, firstDayOfMonth) {
   let dayCounter = 1;
   let today = new Date();
@@ -127,17 +51,7 @@ function fillCalendar(daysInMonth, firstDayOfMonth) {
 }
 
 
-// 5. Вычисляем первый день месяца и заполняем календарь
-let firstDay = new Date(currentDay.getFullYear(), currentDay.getMonth(), 1).getDay();
-firstDay = firstDay === 0 ? 6 : firstDay - 1;
-fillCalendar(new Date(currentDay.getFullYear(), currentDay.getMonth() + 1, 0).getDate(), firstDay);
-
-
-// 6. Отображаем текущий месяц и год
-document.getElementById('currentMonthDisplay').textContent = `${currentMonthName} ${currentDay.getFullYear()}`;
-
-
-// 7. Функция для изменения месяца
+// Изменить Месяц - changeMonth
 function changeMonth(increment) {
   currentDay.setMonth(currentDay.getMonth() + increment);
   let firstDay = new Date(currentDay.getFullYear(), currentDay.getMonth(), 1).getDay();
@@ -148,67 +62,73 @@ function changeMonth(increment) {
   document.getElementById('currentMonthDisplay').textContent = `${currentMonthName} ${currentDay.getFullYear()}`;
 }
 
-
-// 8. Обработчики событий для кнопок навигации по месяцам
-document.getElementById('prevMonth').addEventListener('click', function () { changeMonth(-1); });
-document.getElementById('nextMonth').addEventListener('click', function () { changeMonth(1); });
-
-
-// 9. Обработчик событий для закрытия модального окна
-var modal = document.getElementById('modal');
-
-
-// 10. Получаем ссылки на кнопки в модальном окне
-var saveBtn = document.getElementById('save-event');
-var cancelBtn = document.getElementById('cancel');
-
-
-// 11. Добавляем обработчик событий для кнопки 'Сохранить'
-saveBtn.addEventListener('click', saveEvent);
-
-
-// 12. Добавляем обработчик событий для кнопки 'Отмена'
-cancelBtn.addEventListener('click', cancelEvent);
-
-
-// 13. Динамически заполняем промежутки времени в селекторе времени
-var eventList = document.getElementById('event-list');
-
-for (let i = 8; i < 20; i++) {
-  let timeText = i < 10 ? '0' + i : i;
-  let nextTimeText = i + 1 < 10 ? '0' + (i + 1) : i + 1;
-
-  eventList.innerHTML += `
-      <label class="event-item">
-        <time class="event-time">${timeText}:00 - ${nextTimeText}:00</time>
-        <input type="text" class="event-input">
-      </label>
-    `;
+// Открытие модального окна
+function openModal() {
+  modal.style.display = "block";
 }
 
 
-// 14. Add event listeners for day selection
-weeks.forEach(week => {
-  Array.from(week.children).forEach(day => {
-    day.addEventListener('click', function () {
-      console.log('Day clicked'); // Добавлено для отладки
-      // Обновляем выбранный номер дня
-      document.getElementById('selectedDay').textContent = day.textContent;
+// Закрытие модального окна
+function closeModal() {
+  modal.style.display = "none";
+}
 
-      // Сбрасываем модальное окно
-      resetModal();  // Добавлен вызов функции resetModal()
 
-      // Получаем события для этого дня
-      getEvents(currentDay.getFullYear(), currentDay.getMonth() + 1, parseInt(day.textContent));
+// Сброс данных модального окна
+function resetModal() {
+  console.log("resetModal called");
 
-      // Показываем модальное окно
-      openModal();
-    });
+  // Получаем все элементы ввода в модальном окне
+  var eventInputs = document.querySelectorAll('.event-input');
+
+  // Очищаем каждое поле ввода
+  eventInputs.forEach(input => {
+    input.value = '';
   });
-});
+}
 
 
-// 15. Function to get the events for a given day
+// Обработка нажатия кнопки SAVE / Handle Save Button Click
+function saveEvent() {
+  console.log('saveEvent called');
+
+  const selectedDay = document.getElementById('selectedDay').textContent;
+  const eventItems = document.querySelectorAll('.event-item');
+
+  eventItems.forEach((eventItem, i) => {
+    const timeSlot = eventItem.children[0].textContent;
+    const eventDescription = eventItem.children[1].value;
+
+    const path = 'events/' + currentDay.getFullYear() + '/' + (currentDay.getMonth() + 1) + '/' + selectedDay + '/' + i;
+    const eventRef = database.ref(path);
+
+    if (eventDescription && eventDescription.trim() !== '') {
+      eventRef.set({
+        timeSlot: timeSlot,
+        description: eventDescription
+      })
+        .then(() => console.log('Данные успешно записаны в: ', path))
+        .catch((error) => console.log('Ошибка при записи данных: ', error, 'Не удалось записать данные в: ', path));
+    } else {
+      eventRef.remove()
+        .then(() => console.log('Данные успешно удалены из: ', path))
+        .catch((error) => console.log('Ошибка при удалении данных: ', error, 'Не удалось удалить данные из: ', path));
+    }
+  });
+
+  console.log('saveEvent finished');
+  closeModal();
+}
+
+
+// Обработка нажатия кнопки CANCEL / Handle Cancel Button Click
+function cancelEvent() {
+  console.log('Cancel button clicked');
+  closeModal();
+}
+
+
+// Загрузка событий в модальное окно / Load Events Into Modal
 function getEvents(year, month, day) {
   let dayRef = database.ref(`events/${year}/${month}/${day}`);
 
@@ -216,7 +136,7 @@ function getEvents(year, month, day) {
     const data = snapshot.val();
 
     // Очищаем поля ввода в модальном окне
-    resetModal();
+    // resetModal();
 
     if (data) {
       // Заполняем модальное окно данными из Firebase
@@ -237,3 +157,92 @@ function getEvents(year, month, day) {
     }
   });
 }
+
+
+
+
+
+
+// Получаем текущую дату
+let currentDay = new Date();
+
+
+// Массив с названиями месяцев
+let monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+let currentMonthName = monthNames[currentDay.getMonth()];
+
+
+// Получаем ссылки на каждую секцию недели в HTML
+let weeks = Array.from({ length: 6 }, (_, i) => document.getElementById(`week${i + 1}`));
+
+
+// Вычисление и установка начала месяца /Calculate and Set Start of Month
+let firstDay = new Date(currentDay.getFullYear(), currentDay.getMonth(), 1).getDay();
+firstDay = firstDay === 0 ? 6 : firstDay - 1;
+fillCalendar(new Date(currentDay.getFullYear(), currentDay.getMonth() + 1, 0).getDate(), firstDay);
+
+
+// Обновление отображаемого месяца и года / Update Displayed Month and Year
+document.getElementById('currentMonthDisplay').textContent = `${currentMonthName} ${currentDay.getFullYear()}`;
+
+
+// Навигация по месяцам / Month Navigation
+document.getElementById('prevMonth').addEventListener('click', function () { changeMonth(-1); });
+document.getElementById('nextMonth').addEventListener('click', function () { changeMonth(1); });
+
+
+// Обработчик событий для закрытия модального окна
+var modal = document.getElementById('modal');
+
+
+// Получаем ссылки на кнопки в модальном окне
+var saveBtn = document.getElementById('save-event');
+var cancelBtn = document.getElementById('cancel');
+
+
+//Обработчик событий для кнопки 'Сохранить'
+saveBtn.addEventListener('click', saveEvent);
+
+
+// Обработчик событий для кнопки 'Отмена'
+cancelBtn.addEventListener('click', cancelEvent);
+
+
+// Генерация промежутков времени в модальном окне
+var eventList = document.getElementById('event-list');
+
+for (let i = 8; i < 20; i++) {
+  let timeText = i < 10 ? '0' + i : i;
+  let nextTimeText = i + 1 < 10 ? '0' + (i + 1) : i + 1;
+
+  eventList.innerHTML += `
+      <label class="event-item">
+        <time class="event-time">${timeText}:00 - ${nextTimeText}:00</time>
+        <input type="text" class="event-input">
+      </label>
+    `;
+}
+
+
+// Обработка событий всей недели
+weeks.forEach(week => {
+  Array.from(week.children).forEach(day => {
+    day.addEventListener('click', function () {
+      console.log('Day clicked');
+      // Обновляем выбранный номер дня
+      document.getElementById('selectedDay').textContent = day.textContent;
+
+      // Вызываем функцию resetModal
+      resetModal();
+
+      // Получаем события для этого дня
+      getEvents(currentDay.getFullYear(), currentDay.getMonth() + 1, parseInt(day.textContent));
+
+      // Показываем модальное окно
+      openModal();
+    });
+  });
+});
+
+
+
