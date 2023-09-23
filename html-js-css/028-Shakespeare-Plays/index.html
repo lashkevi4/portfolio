@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/ecf5de3203.js" crossorigin="anonymous"></script>
+
+    <title>Shakespeare Plays</title>
+  </head>
+
+  <body>
+
+    <button id="changeStyleButton">Change style with JavaScript</button>
+
+    <section>
+      <h1>Selected Shakespeare Plays</h1>
+      <ul class="categories">
+
+        <li class="genre">Comedies
+          <ul class="group">
+            <li><a href="#" class="dotted">As you like it</a></li>
+            <li>All's Well Thats Ends Well</li>
+            <li>A Midsummer Night's Dream</li>
+            <li>Twelfth Nignt</li>
+          </ul>
+        </li>
+
+        <li class="genre">Tragedies
+          <ul class="group">
+            <li><a href="media/hamlet.pdf" class="dotted">Hamlet</a><i class="far fa-file-pdf"></i></li>
+            <li>Macbetch</li>
+            <li>Romeo and Juliet</li>
+          </ul>
+        </li>
+
+        <li class="genre">Histories
+          <ul class="group">
+            <li>Henry IV <a href="mailto:example@example.com" class="dotted">(<i class="fas fa-envelope"
+                  style="color: #ffa500;"><i class="fa-solid fa-up-right-from-square"
+                    style="color: #6b9472;"></i></i>email)</a>
+              <ul>
+                <li>Part I</li>
+                <li>Part II</li>
+              </ul>
+            </li>
+            <li><a href="https://www.buckingham-palace.co.uk"><i class="fa-solid fa-up-right-from-square"
+                  style="color: #6b9472;"></i>Henry V</a></li>
+            <li>Richard II</li>
+          </ul>
+        </li>
+
+      </ul>
+    </section>
+
+    <section>
+      <h2>Shakespeare's Plays</h2>
+      <table class="table1" id="firstTable">
+
+        <tr>
+          <td>As you like it</td>
+          <td>Comedy</td>
+          <td>Year</td>
+        </tr>
+        <tr>
+          <td>All's Well Thats Ends Well</td>
+          <td>Comedy</td>
+          <td>1601</td>
+        </tr>
+        <tr>
+          <td>Hamlet</td>
+          <td>Tragedy</td>
+          <td>1604</td>
+        </tr>
+        <tr>
+          <td>Macbetch</td>
+          <td>Tragedy</td>
+          <td>1606</td>
+        </tr>
+        <tr>
+          <td>Romeo and Juliet</td>
+          <td>Tragedy</td>
+          <td>1595</td>
+        </tr>
+        <tr>
+          <td>Henry IV, Part 1</td>
+          <td>History</td>
+          <td>1596</td>
+        </tr>
+        <tr>
+          <td>Henry V</td>
+          <td>History</td>
+          <td>1599</td>
+        </tr>
+
+      </table>
+
+    </section>
+
+    <section>
+      <h2>Shakespeare's Sonnets</h2>
+
+      <table class="table2" id="secondTable">
+        <tr>
+          <td>The Fair Youth</td>
+          <td class="pages">1-126</td>
+        </tr>
+        <tr>
+          <td>The Dark Lady</td>
+          <td class="pages">127-152</td>
+        </tr>
+        <tr>
+          <td>The Rival Poet</td>
+          <td class="pages">78-86</td>
+        </tr>
+      </table>
+
+    </section>
+
+    <script src="./js/script.js"></script>
+
+  </body>
+
+</html>

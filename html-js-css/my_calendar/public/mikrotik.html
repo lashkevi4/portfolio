@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist</title>
+    <style>
+      .checklist-item {
+        margin-bottom: 15px;
+      }
+
+      .checklist-item label {
+        display: block;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="checklist">
+
+
+
+      <div class="checklist-item">1. Обновление ПО:
+        <ul>
+          <li>a. Обновите RouterOS и RouterBOOT до последних версий.</li>
+          <li>b. Включите автоматические обновления, если возможно.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">2. Изменение доступа по умолчанию:
+        <ul>
+          <li>a. Измените стандартные логин и пароль.</li>
+          <li>b. Установите сложный уникальный пароль.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">3. Ограничение доступа по IP:
+        <ul>
+          <li>a. Ограничьте доступ к управлению маршрутизатором с определенных доверенных IP-адресов.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">4. Включение Firewall:
+        <ul>
+          <li>a. Настройте базовые правила firewall для блокирования нежелательного трафика.</li>
+          <li>b. Закройте все ненужные порты.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">5. Отключение ненужных сервисов:
+        <ul>
+          <li>a. Отключите неиспользуемые и устаревшие сервисы, такие как Telnet, FTP.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">6. Настройка двухфакторной аутентификации (если возможно):
+        <ul>
+          <li>a. Включите двухфакторную аутентификацию для дополнительного слоя защиты.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">7. Защита от атак на подбор паролей:
+        <ul>
+          <li>a. Включите автоматическую блокировку IP-адресов после нескольких неудачных попыток входа.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">8. Журналирование и мониторинг:
+        <ul>
+          <li>a. Настройте системы журналирования для отслеживания любых попыток несанкционированного доступа.</li>
+          <li>b. Регулярно проверяйте журналы на наличие подозрительной активности.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">9. Резервное копирование:
+        <ul>
+          <li>a. Создавайте регулярные резервные копии настроек маршрутизатора, чтобы в случае инцидента можно было
+            быстро
+            восстановить систему.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">10. Физическая безопасность:
+        <ul>
+          <li>a. Обеспечьте контроль доступа к физическому оборудованию маршрутизатора.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">11. Блокировка сканирования портов:
+        <ul>
+          <li>a. Настройте правила, которые автоматически блокируют IP-адреса, пытающиеся подключиться к большому
+            количеству портов в короткие промежутки времени.</li>
+          <li>b. Это может помочь предотвратить попытки сканирования портов, которые часто являются предварительным
+            этапом
+            атаки.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">12. Использование IPS/IDS (Системы предотвращения/обнаружения вторжений):
+        <ul>
+          <li>a. Эти системы могут наблюдать за трафиком в реальном времени и блокировать известные атаки, а также
+            оповещать администраторов о подозрительной активности.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">13. Ограничение времени доступа:
+        <ul>
+          <li>a. Если возможно, настройте ограничения доступа к управлению маршрутизатором в определенные часы, чтобы
+            снизить риск взлома вне рабочего времени.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">14. Настройка аварийного оповещения:
+        <ul>
+          <li>a. Настройте систему оповещений, которая будет уведомлять администраторов по электронной почте или SMS о
+            критических событиях безопасности.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">15. Использование безопасных протоколов:
+        <ul>
+          <li>a. Отключите устаревшие и незащищенные протоколы, такие как HTTP и FTP, и используйте их защищенные
+            аналоги,
+            такие как HTTPS и SFTP.</li>
+        </ul>
+      </div>
+      <div class="checklist-item">16. Использование доверенных сертификатов:
+        <ul>
+          <li>a. Установите доверенные SSL/TLS сертификаты для веб-интерфейсов и других защищенных соединений.</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+    </div>
+    <script>
+      var checklistItems = [
+        { title: "Обновление ПО:", subItems: ["Обновите RouterOS и RouterBOOT до последних версий.", "Включите автоматические обновления, если возможно."] },
+        { title: "Изменение доступа по умолчанию:", subItems: ["Измените стандартные логин и пароль.", "Установите сложный уникальный пароль."] },
+        // Добавьте другие пункты здесь
+      ];
+
+      var checklistDiv = document.getElementById('checklist');
+
+      checklistItems.forEach(function (item, index) {
+        var div = document.createElement('div');
+        div.className = 'checklist-item';
+
+        var label = document.createElement('label');
+        label.textContent = (index + 1) + ". " + item.title;
+        div.appendChild(label);
+
+        item.subItems.forEach(function (subItem, subIndex) {
+          var id = "checkbox-" + index + "-" + subIndex;
+          var checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.id = id;
+          checkbox.checked = localStorage.getItem(id) === 'true';
+          checkbox.addEventListener('change', function () {
+            localStorage.setItem(id, checkbox.checked);
+          });
+
+          var label = document.createElement('label');
+          label.htmlFor = id;
+          label.textContent = subItem;
+          div.appendChild(checkbox);
+          div.appendChild(label);
+          div.appendChild(document.createElement('br'));
+        });
+
+        checklistDiv.appendChild(div);
+      });
+    </script>
+  </body>
+
+</html>

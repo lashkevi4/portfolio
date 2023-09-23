@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript change font size</title>
+
+    <style>
+      html {
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        background-color: aliceblue;
+      }
+
+      main {
+        width: 800px;
+        margin: 0 auto;
+        background-color: darksalmon;
+        padding: 10px;
+        border: 5px solid grey;
+        border-radius: 15px;
+      }
+
+      button {
+        padding: 10px;
+        background-color: aqua;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 30px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Change font size with JavaScript</h1>
+      <hr>
+
+      <p>Note! All changes occur with JavaScipt.
+        The font size of the list is changed by pressing the button below. The default font size for the list is
+        16px.</p>
+
+      <h2>The font size of this list changes by pressing a button</h2>
+
+      <ol>
+
+        <li>The first push of a button changes font size to 20px</li>
+        <li>The second push of a button changes font size to 24px</li>
+        <li>The third push of a button changes font size to 28px</li>
+        <li>The fourth push of the button changes font size to 32px</li>
+        <li>The fifth push of a button returns font size 16px</li>
+
+      </ol>
+
+      <footer>
+        <button type="button" onclick="ChangeFontSize()">Change font size</button>
+        <div id="currentSize">Current size: 16px</div>
+      </footer>
+
+      <script>
+
+        let countClick = 0;
+
+        function ChangeFontSize() {
+
+          countClick++;
+
+          let listItems = document.querySelectorAll("ol li");
+
+          if (countClick === 1) {
+            listItems.forEach(li => li.style.fontSize = "20px");
+            document.getElementById("currentSize").innerText = "Current size: 20px";
+          }
+
+          else if (countClick === 2) {
+            listItems.forEach(li => li.style.fontSize = "24px");
+            document.getElementById("currentSize").innerText = "Current size: 24px";
+          }
+
+          else if (countClick === 3) {
+            listItems.forEach(li => li.style.fontSize = "28px");
+            document.getElementById("currentSize").innerText = "Current size: 28px";
+          }
+
+          else if (countClick === 4) {
+            listItems.forEach(li => li.style.fontSize = "32px");
+            document.getElementById("currentSize").innerText = "Current size: 32px";
+          }
+
+          else if (countClick === 5) {
+            listItems.forEach(li => li.style.fontSize = "16px");
+            document.getElementById("currentSize").innerText = "Current size: 32px";
+            countClick = 0;
+            document.getElementById("currentSize").innerText = "Current size: 16px";
+          }
+
+        }
+      </script>
+
+    </main>
+
+  </body>
+
+</html>

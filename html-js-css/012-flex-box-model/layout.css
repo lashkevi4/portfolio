@@ -1,0 +1,43 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 1rem;
+}
+h1 {
+  font-size: 3.4rem;
+  margin-block-end: 1rem;
+}
+h2 {
+  font-size: 2.4rem;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+.parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.parent > * {
+  flex-basis: 0px;
+  flex-grow: 1;
+  order: 2;
+}
+p {
+  padding: 2rem;
+}
+.color-red {
+  background-color: red;
+}
+.color-blue {
+  background-color: rgb(97, 210, 248);
+}
+.color-green {
+  background-color: rgb(55, 212, 55);
+}
+.parent .flex-grow {
+  flex-grow: 2;
+}
+.parent .order1 {
+  order: 1;
+}

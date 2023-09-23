@@ -1,0 +1,52 @@
+.ylattuniste h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.ylattuniste p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin: 10px;
+}
+
+#rinnakkain p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin: 10px;
+}
+
+#rinnakkain{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#kuvanpaikka{
+    margin: 10px;
+}
+
+#rinnakkain img{
+    width: 100%;
+}
+
+footer{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding: 10px;
+}
+
+body > *{
+    border: 1px dashed gray;
+}
+
+@media screen and (min-width:426px){
+    #rinnakkain{
+        flex-direction: row;
+    }
+    #rinnakkain > *{
+        flex-grow: 1;   
+        flex-basis: 45%;
+    }
+    

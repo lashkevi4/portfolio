@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 5px;
+        background: grey;
+        font-family: Arial, sans-serif;
+      }
+
+      #character-count {
+        font-size: 2em;
+        color: white;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      #text-area {
+        width: calc(100% - 10px);
+        height: 90vh;
+        border: none;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+        border-radius: 5px;
+        outline: none;
+        resize: none;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="character-count">0</div>
+    <textarea id="text-area"></textarea>
+
+    <script>
+      document.getElementById('text-area').addEventListener('input', function (e) {
+        document.getElementById('character-count').innerText = e.target.value.length;
+      });
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,59 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.ylatunniste {
+    border: 1px dashed gray;
+}
+
+.ylatunniste h1 {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.ylatunniste p {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#rinnakkain {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    border: 1px dashed gray;
+}
+
+#rinnakkain p {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#rinnakkain img {
+    width: 100%;
+}
+
+#kuvanpaikka {
+    padding: 10px;
+}
+
+footer {
+    font-size: 20px;
+    padding: 10px;
+    border: 1px dashed gray;
+}
+
+
+@media screen and (min-width:426px) {
+
+    #rinnakkain {
+        flex-direction: row;
+    }
+
+    #rinnakkain>* {
+        flex-grow: 1;
+        flex-basis: 45%;
+    }
+}

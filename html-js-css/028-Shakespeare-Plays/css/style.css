@@ -1,0 +1,94 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6rem;
+  padding: 1rem;
+
+}
+
+button {
+  background-color: brown;
+  color: white;
+  padding: 10px;
+  font-weight: 700;
+}
+
+ul {
+  list-style: disc;
+  padding: 1rem 1rem 1rem 4rem;
+  list-style: 1.5;
+}
+
+h1,
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+table {
+  margin-bottom: 1rem;
+}
+
+tr {
+  line-height: 1.5;
+}
+
+td {
+  padding-right: 1rem;
+}
+
+/* -----------------STYLES FROM JAVASCRIPT----------------- */
+
+/* body {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+ul.group {
+  list-style-position: inside;
+  background-color: lightgrey;
+  padding: 10px;
+  margin-top: 1rem;
+}
+
+.table1 tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+.table2 tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.table1 td {
+  padding-right: 100px;
+}
+
+.table2 td {
+  padding-right: 187px;
+}
+
+.table2 .pages {
+  padding-right: 100px;
+}
+
+
+.dotted {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: brown;
+  font-style: italic;
+  font-weight: 700;
+}
+
+i {
+  padding: 0 5px;
+} */

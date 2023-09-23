@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style1.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <title>Calendar</title>
+
+  </head>
+
+  <body>
+
+    <main class="container-main">
+
+      <!-- навигационная панель -->
+      <div class="navigation">
+
+        <div class="navigation-item" id="home" onclick="location.reload();">
+          <div class="navigation-item-button">
+            <img src="./img/home.png">
+          </div>
+        </div>
+
+
+        <div class="navigation-item" id="prevMonth">
+          <div class="navigation-item-button">
+            <img src="./img/left.png">
+          </div>
+        </div>
+
+        <div class="navigation-item">
+          <div class="navigation-item-month" id="currentMonthDisplay"></div>
+        </div>
+
+        <div class="navigation-item" id="nextMonth">
+          <div class=" navigation-item-button">
+            <img src="./img/right.png">
+          </div>
+        </div>
+
+        <a href="resolution.html" class="navigation-item" id="info">
+          <div class="navigation-item-button">
+            <img src="./img/info.png">
+          </div>
+        </a>
+
+
+      </div>
+
+      <!-- таблличная часть -->
+      <div class="calendar-table">
+
+        <article class="container-fluid">
+
+          <div class="row days">
+            <div class="col">Пн</div>
+            <div class="col">Вт</div>
+            <div class="col">Ср</div>
+            <div class="col">Чт</div>
+            <div class="col">Пт</div>
+            <div class="col">Сб</div>
+            <div class="col">Вс</div>
+          </div>
+
+          <div class="row dates" id="week1">
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+          </div>
+
+          <div class="row dates" id="week2">
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+          </div>
+
+          <div class="row dates" id="week3">
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+          </div>
+
+          <div class="row dates" id="week4">
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+          </div>
+
+          <div class="row dates" id="week5">
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+          </div>
+
+          <div class="row dates last-row" id="week6">
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+            <div class="col day"></div>
+          </div>
+
+        </article>
+
+      </div>
+
+    </main>
+
+
+    <!-- нужно для JS -->
+    <span id="selectedDay" style="display: none;"></span>
+
+
+    <!-- Модальное окно -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalDateDisplay"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="event-list">
+            <!-- Здесь будут элементы со временем и полями для ввода -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancel">Отменить</button>
+            <button type="button" class="btn btn-primary" id="save-event">Сохранить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script> -->
+
+    <script src="./js/script.js"></script>
+
+  </body>
+
+</html>

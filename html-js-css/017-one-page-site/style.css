@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(99, 96, 96);
+}
+
+nav {
+    width: 100%;
+    background-color: rgba(27, 25, 25, 0.972);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+.left-aside {
+    width: 30%;
+    margin-left: 4rem;
+    text-align: left;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.right-aside {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav li {
+    transition: transform 0.3s ease;
+    line-height: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+nav a {
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+}
+
+.image-section {
+    position: relative;
+    margin-top: 7rem;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    background-color: rgb(99, 96, 96);
+}
+
+.text-block {
+    position: absolute;
+    /* Устанавливает абсолютное позиционирование элемента */
+    top: 0;
+    /* Позиция элемента относительно верхнего края родительского элемента с position: relative */
+    left: 0;
+    /* Позиция элемента относительно левого края родительского элемента с position: relative */
+    right: 0;
+    /* Позиция элемента относительно правого края родительского элемента с position: relative */
+    bottom: 0;
+    /* Позиция элемента относительно нижнего края родительского элемента с position: relative */
+    width: 80%;
+    /* Задает ширину элемента равной 70% ширины родительского элемента */
+    height: 80%;
+    /* Задает высоту элемента равной 70% высоты родительского элемента */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Устанавливает полупрозрачный черный фон (50% прозрачности) */
+    color: white;
+    /* Задает цвет текста элемента */
+    display: flex;
+    /* Устанавливает тип отображения элемента в виде гибкого контейнера */
+    flex-direction: column;
+    /* Устанавливает вертикальное направление гибкого контейнера */
+    justify-content: flex-start;
+    /* Выравнивает содержимое гибкого контейнера по центру по вертикали */
+    align-items: left;
+    /* Выравнивает содержимое гибкого контейнера по центру по горизонтали */
+    gap: 4rem;
+    /* Задает расстояние между дочерними элементами гибкого контейнера */
+    padding: 3rem;
+    /* Задает внутренние отступы элемента */
+    margin: auto;
+    /* Выравнивает элемент по центру родительского элемента с position: relative */
+}
+
+.text-block h1,
+h2,
+a,
+ol {
+    font-size: 6rem;
+    color: rgb(205, 156, 1);
+    text-shadow: 0 0 5px rgba(205, 156, 1, 0.7),
+        0 0 10px rgba(205, 156, 1, 0.6),
+        0 0 20px rgba(205, 156, 1, 0.5),
+        0 0 40px rgba(205, 156, 1, 0.4);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+
+}
+
+.text-block a {
+    letter-spacing: .5rem;
+    font-style: italic;
+}
+
+.text-block ol {
+    color: white;
+}
+
+.text-block h2,
+a,
+ol {
+    font-size: 4rem;
+    text-decoration: none;
+}
+
+ol {
+    padding-left: 8rem;
+    list-style-type: decimal;
+}
+
+.Past {
+    background-color: rgb(236, 233, 233);
+    margin-left: 7rem;
+    margin-right: 7rem;
+    font-size: 8rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
+.Past h1 {
+    margin-bottom: 4rem;
+    margin-left: 2rem;
+    padding-top: 2rem;
+}
+
+.Card1,
+.Card2,
+.Card3 {
+    margin-right: 0;
+    border: solid gray .2rem;
+    border-radius: 2rem;
+    width: 32%;
+    background-color: white;
+    margin-bottom: 4rem;
+}
+
+.Card1 img,
+.Card2 img,
+.Card3 img {
+    width: 92%;
+    margin: 2rem;
+}
+
+.Card1 h2,
+.Card2 h2,
+.Card3 h2 {
+    width: 100%;
+    margin: 2rem;
+    color: black;
+    text-shadow: none;
+    font-weight: 800;
+}
+
+.Card1 p,
+.Card2 p,
+.Card3 p {
+    width: 100%;
+    color: black;
+    margin-left: 2rem;
+    margin-bottom: 0;
+    font-size: 4rem;
+    max-width: calc(100% - 2rem);
+}
+
+.Card1 a,
+.Card2 a,
+.Card3 a {
+    display: inline-block;
+    margin-left: 2rem;
+    font-size: 4rem;
+    text-shadow: none;
+    margin-bottom: 3rem;
+}
+
+.blue-line {
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border: none;
+    border-top: .3rem solid lightblue;
+}
+
+.white-line {
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-top: .3rem solid white;
+}
+
+.Present,
+.Future {
+    width: 100%;
+    max-width: 100%;
+}
+
+.Present article,
+.Future article {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.Present h2,
+.Future h2,
+.Contact h2 {
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+.Present p,
+.Future p {
+    width: 60%;
+    font-size: 3rem;
+    text-indent: 6rem;
+}
+
+.Present img,
+.Future img {
+    width: 40%;
+    height: 35%;
+    padding-top: 1rem;
+    /* height: auto;
+    margin-left: 0; */
+}
+
+.Future p {
+    order: 2;
+    padding-left: 3rem;
+}
+
+.Future img {
+    order: 1;
+}
+
+.Contact {
+    width: 100%;
+
+}
+
+.Form {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    margin-top: 4rem;
+    justify-content: center;
+
+}
+
+.Form label {
+    width: 30%;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: white;
+}
+
+.Form input,
+.Form textarea {
+    width: 65%;
+    display: inline-block;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    vertical-align: top;
+    margin-right: 0;
+    padding: 0;
+}
+
+button[type="submit"] {
+    background-color: rgb(205, 156, 1);
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 3rem;
+    text-align: center;
+    width: 20rem;
+    margin: 2rem auto;
+    display: block;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(132, 101, 1);
+}
+
+footer {
+    color: white;
+    font-size: 3rem;
+    margin-left: 7rem;
+    margin-bottom: 5rem;
+}
+
+
+/* ---------------- style for tablet ---------------- */
+/* @media (min-width: 320px) {

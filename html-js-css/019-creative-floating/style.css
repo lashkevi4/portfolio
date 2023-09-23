@@ -1,0 +1,82 @@
+.container {
+  width: 400px;
+  border: solid rgb(103, 102, 102) 2px;
+  background-color: gainsboro;
+  background-image: linear-gradient(to bottom right, gainsboro, white);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.reverse .head,
+.reverse .text {
+  float: left;
+}
+
+.head {
+  float: right;
+  width: 70%;
+}
+
+.head h1 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.image {
+  float: left;
+  width: 30%;
+}
+
+.image img {
+  background-color: white;
+  border: solid lightgray 1px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 3px 3px darkgrey;
+  max-width: 100%;
+}
+
+.reverse .image {
+  float: right;
+}
+
+.text {
+  float: right;
+  width: 70%;
+}
+
+.text p {
+  font-size: 15px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 425px) {
+
+  body {
+    margin: 0;
+  }
+
+  .container {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    min-width: 320px;
+    padding: 10px;
+  }
+
+}

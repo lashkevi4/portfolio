@@ -1,0 +1,521 @@
+html {
+    font-size: 62.5%;
+}
+
+/* ---------------- style for smartphone ---------------- */
+@media (max-width: 767px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(115, 183, 73);
+    }
+
+    header img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    nav li {
+        width: 100%;
+        /* Задаем ширину элемента списка равной 100% для размещения ссылок друг под другом на мобильных устройствах */
+    }
+
+    nav a {
+        display: block;
+        /* Делаем ссылки блочными элементами, чтобы они занимали всю ширину и располагались друг под другом на мобильных устройствах */
+
+        padding: 10px 15px;
+        /* Добавляем внутренние отступы для ссылок */
+
+        color: white;
+        /* Задаем цвет текста для ссылок */
+
+        text-decoration: none;
+        /* Убираем подчеркивание текста ссылок */
+
+        border-radius: 0.8rem;
+        /* Добавляем скругление углов для ссылок */
+
+        border: solid white .1rem;
+
+        transition: background-color 0.3s;
+        /* Добавляем плавный переход цвета фона при наведении на ссылки */
+
+        text-align: center;
+        /* Выравнивание текста по центру */
+
+        padding: 1.5rem;
+
+        font-size: 2rem;
+
+        font-weight: bold;
+        /* Задаем жирность */
+
+        letter-spacing: .3rem;
+        /* задаем ширину между буквами */
+    }
+
+    nav a:hover {
+        background-color: green;
+        /* Изменяем цвет фона для ссылок при наведении */
+    }
+
+    /* section .maincontent {
+        width: 100%;
+        max-width: 100%;
+        color: black;
+        text-align: center;
+    } */
+
+    #vision {
+        padding: 2rem;
+    }
+
+    .text h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    #vision .figure {
+        display: none;
+        /* выключаем отображение определенной фотографии*/
+    }
+
+    #specials h3,
+    #events h3,
+    #news h3 {
+        color: black;
+        font-size: 2.8rem;
+        border: solid white 1.3rem;
+        background-color: lightgray;
+        padding: 1rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    #specials img,
+    #events img,
+    #news img {
+        width: 100%;
+        /* Ширина во весь экран */
+
+        max-width: 100%;
+        /* Ограничиваем максимальную ширину */
+
+        margin-top: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+
+
+        width: calc(100% - 2.1rem);
+        /* Учитываем отступы слева и справа */
+
+        background-color: white;
+
+    }
+
+    .special-box {
+        /* Делаем фигуру и картинку блочными элементами, чтобы они располагались на одной строке */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: lightgray;
+        /* Рамка вокруг контейнера */
+    }
+
+    #specials,
+    #events,
+    #news {
+        background-color: white;
+    }
+
+    #events,
+    #news {
+        border-top: solid rgb(115, 183, 73) 1rem;
+    }
+
+    #news {
+        border-bottom: solid rgb(115, 183, 73)1rem;
+        padding-bottom: 1rem;
+    }
+
+    #news table td {
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-left: 2rem;
+    }
+
+    footer .first-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .first-line span {
+        flex-grow: 1;
+    }
+
+    .first-line i {
+        margin-left: 1rem;
+    }
+
+    .second-line {
+        color: white;
+        margin-left: 2rem;
+        font-size: 2rem;
+    }
+
+    .third-line {
+        color: black;
+        margin-left: 2rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* ---------------- style for tablet ---------------- */
+@media (min-width: 768px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(115, 183, 73);
+    }
+
+    .container {
+        width: 99.8%;
+    }
+
+    header img {
+        width: 43%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        width: 100%;
+        /* Задаем ширину элемента списка равной 100% для размещения ссылок друг под другом на мобильных устройствах */
+    }
+
+    nav a {
+        display: block;
+        /* Делаем ссылки блочными элементами, чтобы они занимали всю ширину и располагались друг под другом на мобильных устройствах */
+
+        padding: 10px 15px;
+        /* Добавляем внутренние отступы для ссылок */
+
+        color: white;
+        /* Задаем цвет текста для ссылок */
+
+        text-decoration: none;
+        /* Убираем подчеркивание текста ссылок */
+
+        border-radius: 0.8rem;
+        /* Добавляем скругление углов для ссылок */
+
+        border: solid white .1rem;
+
+        transition: background-color 0.3s;
+        /* Добавляем плавный переход цвета фона при наведении на ссылки */
+
+        text-align: center;
+        /* Выравнивание текста по центру */
+
+        padding: 1.5rem;
+
+        font-size: 2rem;
+
+        font-weight: bold;
+        /* Задаем жирность */
+
+        letter-spacing: .3rem;
+        /* задаем ширину между буквами */
+    }
+
+    nav a:hover {
+        background-color: green;
+        /* Изменяем цвет фона для ссылок при наведении */
+    }
+
+    /* section .maincontent {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        color: black;
+        text-align: center;
+    } */
+
+    #vision {
+        display: flex;
+        width: 97, 5%;
+        border: solid white 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .text h2 {
+        display: flex;
+        align-items: center;
+        background-color: rgb(238, 223, 204);
+        height: 100%;
+        font-size: 3rem;
+        padding-left: 1rem;
+    }
+
+    #vision img {
+        width: 100%;
+        height: auto;
+    }
+
+    #boxes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        /* outline: 2px solid #ff0000; */
+
+    }
+
+    #specials,
+    #events {
+        background-color: white;
+        width: 50%;
+    }
+
+    #specials h3,
+    #events h3 {
+        color: black;
+        font-size: 2.8rem;
+        border: solid white 1rem;
+        background-color: lightgray;
+        padding: 1rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #specials h3 {
+        border-right: solid white 0.5rem;
+    }
+
+    #events h3 {
+        border-left: solid white 0.5rem;
+    }
+
+    #specials figure,
+    #events figure {
+        width: 100%;
+        height: 76%;
+        overflow: hidden;
+        box-sizing: border-box;
+
+    }
+
+    #specials figure {
+        padding-left: 1rem;
+        padding-right: .5rem;
+    }
+
+    #events figure {
+        padding-left: .5rem;
+        padding-right: 1rem;
+    }
+
+    #specials img,
+    #events img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+
+    #news {
+        width: 100%;
+        background-color: white;
+        margin-top: 1rem;
+        /* outline: 2px solid #ff0000; */
+    }
+
+    #news h3 {
+        color: black;
+        font-size: 2.8rem;
+        border: solid white 1rem;
+        background-color: lightgray;
+        padding: 1rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #news table {
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        line-height: 2.5rem;
+    }
+
+    #news tr td:first-child {
+        font-weight: bold;
+        padding-right: 2rem;
+    }
+
+
+    footer {
+        margin-top: 1rem;
+        font-size: 2rem;
+        color: white;
+    }
+
+    footer .first-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        color: white;
+    }
+
+    .first-line span {
+        flex-grow: 1;
+    }
+
+    .first-line i {
+        margin-left: 1rem;
+    }
+
+    .second-line {
+        color: white;
+        margin-left: 1rem;
+    }
+
+    .third-line {
+        color: black;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* ---------------- style for pc ---------------- */
+@media (min-width: 1200px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(115, 183, 73);
+        max-width: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #boxes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        /* outline: 2px solid #ff0000; */
+        margin-bottom: 0;
+    }
+
+    #specials,
+    #events,
+    #news {
+        background-color: white;
+        width: 33.33%;
+    }
+
+    #specials h3,
+    #events h3,
+    #news h3 {
+        color: black;
+        font-size: 2.8rem;
+        border: solid white 1rem;
+        background-color: lightgray;
+        padding: 1rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    #specials h3 {
+        border-right: solid white 0.5rem;
+    }
+
+    #events h3 {
+        border-left: solid white 0.5rem;
+        border-right: solid white 0.5rem;
+    }
+
+    #news h3 {
+        border-left: solid white 0.5rem;
+        border-right: solid white 1rem;
+    }
+
+    #news {
+        background-color: white;
+        margin-top: 0;
+        /* outline: 2px solid #ff0000; */
+    }
+
+    #news table {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-top: 0;
+    }
+
+    #news tr td:first-child {
+        font-weight: bold;
+        padding-right: 2rem;
+    }
+
+
+    footer {
+        margin-top: 1rem;
+        font-size: 2rem;
+        color: white;
+    }
+
+    footer .first-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 1rem;
+        color: white;
+    }
+
+    .first-line span {
+        flex-grow: 1;
+    }
+
+    .first-line i {
+        margin-left: 1rem;
+    }
+
+    .second-line {
+        color: white;
+        margin-left: 0;
+    }
+
+    .third-line {
+        color: black;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+}

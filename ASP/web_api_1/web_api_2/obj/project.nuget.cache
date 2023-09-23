@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "tWJQdXHQIYCpw+34TMpaP1Up3FwbeDSMtz1PmF9onbeW6aFyg5WRXg2EbnJhmrAeV7iAncsGLlDRVrgzpTgGHw==",
+  "success": true,
+  "projectFilePath": "/Users/aleksandrlashkevich/Documents/Документы — MacBook Pro — Aleksandr/Portfolio/2023/ASP/web_api_1/web_api_2/web_api_2.csproj",
+  "expectedPackageFiles": [
+    "/Users/aleksandrlashkevich/.nuget/packages/microsoft.aspnetcore.openapi/7.0.10/microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
+    "/Users/aleksandrlashkevich/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/aleksandrlashkevich/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/Users/aleksandrlashkevich/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/Users/aleksandrlashkevich/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/Users/aleksandrlashkevich/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/Users/aleksandrlashkevich/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

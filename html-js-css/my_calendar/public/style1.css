@@ -1,0 +1,256 @@
+:root {
+  --background-color: hsl(200, 78%, 95%);
+  --background-free-days-color: hsl(200, 78%, 85%);
+  --background-modal-color: #ddcdbb;
+  --table-color: grey;
+  --text-color: #494949;
+  --data-color: blue;
+  --days-work-color: blue;
+  --days-free-color: #8A140E;
+  --accent-color: #8A140E;
+  --button-color: #8A140E;
+  --button-modal-color: #ffffff;
+  --current-day-color: #8A140E;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, Arial, sans-serif;
+  background-color: var(--background-color);
+  height: 100vh;
+  margin: 0;
+  padding-left: 0.1875rem;
+  padding-right: 0.1875rem;
+  padding-bottom: 0.1875rem;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ----------------- N A V I G A T I O N ----------------- */
+.navigation {
+  display: flex;
+  flex: .05;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /* border: 1px solid red; */
+}
+
+.navigation-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #808080; */
+}
+
+/* классы для кнопок и их содержимого */
+.navigation-item-button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid; */
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.navigation-item-button:hover {
+  background-color: #8A140E;
+}
+
+.navigation-item-button:active {
+  transform: scale(1.1);
+}
+
+.navigation-item-button img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+/* класс для месяца */
+.navigation-item-month {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--accent-color);
+  line-height: 90%;
+}
+
+/* ----------------- D A Y S ----------------- */
+.calendar-table {
+  flex: 1;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.days {
+  display: flex;
+  align-items: center;
+  flex: .2;
+  font-weight: 700;
+  border: 0;
+  font-size: 18px;
+  padding: 0;
+}
+
+.days .col {
+  text-align: center;
+  padding: 0;
+  border: 0.0625rem solid var(--table-color);
+}
+
+.current-day {
+  font-weight: bold;
+  font-size: 30px !important;
+  padding-top: 0 !important;
+  color: var(--current-day-color);
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  background-color: lightgray;
+}
+
+.current-day:hover {
+  font-weight: 300 !important;
+}
+
+.dates {
+  display: flex;
+  flex: 1;
+}
+
+.dates .day:nth-child(-n+5):hover,
+.dates .day:nth-child(n+6):hover {
+  background-color: #8A140E;
+  color: white;
+  font-size: 25px;
+  padding-top: 0;
+}
+
+.dates .col {
+  border: 0.0625rem solid var(--table-color);
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: end;
+  margin: 0;
+}
+
+/* ------------ d r a w  D A Y S  t a b l e ------------ */
+
+/* DAY-works */
+.days .col:nth-child(-n+5) {
+  color: var(--days-work-color);
+}
+
+/* DAY-weekend */
+.days .col:nth-child(n+6) {
+  color: var(--days-free-color);
+  background-color: var(--background-free-days-color);
+}
+
+/* DATE-weekend */
+.dates .day:nth-child(n+6) {
+  background-color: var(--background-free-days-color);
+}
+
+/* Закругление сверху слева */
+.days .col:first-child {
+  border-top-left-radius: 0.625rem;
+}
+
+/* Закругление сверху справа */
+.days .col:last-child {
+  border-top-right-radius: 0.625rem;
+}
+
+/* Закругление снизу слева */
+.dates.last-row .col:first-child {
+  border-bottom-left-radius: 0.625rem;
+}
+
+/* Закругление снизу справа */
+.dates.last-row .col:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+
+/* Стили для мобильных устройств в вертикальной ориентации */
+@media only screen and (max-width: 767px) {
+
+  .navigation-item-month {
+    font-size: 150%;
+    /* line-height: 120%; */
+    line-height: 70%;
+    color: red;
+  }
+
+  .col.day {
+    padding-top: 0;
+  }
+
+  .current-day {
+    font-size: 100%;
+    /* padding-top: 0 !important; */
+  }
+
+  .days .col:nth-child(-n+5),
+  .days .col:nth-child(n+6) {
+    font-size: 100%;
+  }
+
+  .dates .day:nth-child(-n+5):hover,
+  .dates .day:nth-child(n+6):hover {
+    font-size: 200%;
+  }
+
+}
+
+
+
+/* Стили для мобильных устройств в горизонтальной ориентации и планшетов в вертикальной ориентации */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .navigation-item-month {
+    font-size: 180%;
+    line-height: 70%;
+    color: green !important;
+  }
+
+  .col.day {
+    padding-top: 0;
+  }
+
+  .current-day {
+    font-size: 100%;
+    /* padding-top: 0 !important; */
+  }
+
+  .days .col:nth-child(-n+5),
+  .days .col:nth-child(n+6) {
+    font-size: 120%;
+  }
+
+  .dates .day:nth-child(-n+5):hover,
+  .dates .day:nth-child(n+6):hover {
+    font-size: 200%;
+  }
+}
+
+/* Стили для планшетов в горизонтальной ориентации и малых компьютеров */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  /* Здесь идут ваши CSS стили */
+}

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+      :root {
+        --background-color: hsl(200, 78%, 95%);
+        --background-free-days-color: lightblue;
+        --background-modal-color: #fefefe;
+        --table-color: grey;
+        --text-color: #494949;
+        --work-days-color: blue;
+        --free-days-color: #8A140E;
+        --accent-color: #8A140E;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background-color: var(--background-color);
+      }
+
+      .container-main {
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: calc(100vh - 20px);
+      }
+
+      .navigation {
+        width: 100%;
+        height: 10%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 10px;
+      }
+
+      .navigation-item article img {
+        width: 32px;
+        height: 32px;
+      }
+
+      .navigation-item article img:hover {
+        border: solid 2px var(--accent-color);
+        border-radius: 10px;
+        padding: 10px;
+        box-sizing: content-box;
+      }
+
+      .navigation-item article img:active {
+        transform: scale(1.1);
+      }
+
+      .navigation section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #currentMonthDisplay {
+        color: var(--accent-color);
+        font-size: x-large;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.1;
+      }
+
+      .calendar-table {
+        width: 100%;
+        height: 90%;
+        display: grid;
+        grid-template-rows: 0.5fr repeat(6, 2fr);
+      }
+
+      .calendar-table section {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+      }
+
+      .weekdays article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--table-color);
+        border-right: none;
+        border-bottom: none;
+        color: var(--work-days-color);
+        font-weight: 600;
+      }
+
+      .dates article {
+        display: flex;
+        justify-content: right;
+        border: 1px solid var(--table-color);
+        border-right: none;
+        border-bottom: none;
+        color: var(--text-color);
+        font-weight: 600;
+        padding: 10px;
+      }
+
+      .dates article:hover {
+        color: white;
+        background-color: var(--accent-color);
+        font-size: 25px;
+      }
+
+      .current-day {
+        font-size: 25px;
+        font-weight: 300;
+        color: var(--accent-color) !important;
+        text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+        background-color: lightgray;
+      }
+
+      .current-day:hover {
+        color: white;
+        background-color: var(--accent-color);
+      }
+
+      /* Цвета таблицы */
+      .calendar-table section article:last-child {
+        border-right: 1px solid var(--table-color);
+      }
+
+      .calendar-table section:last-child article {
+        border-bottom: 1px solid var(--table-color);
+      }
+
+      /* DAY-works */
+      .weekdays article:nth-child(-n+5) {
+        color: var(--work-days-color);
+      }
+
+      /* DAY-weekend */
+      .weekdays article:nth-child(n+6) {
+        color: var(--free-days-color);
+        background-color: var(--background-free-days-color);
+      }
+
+      /* DATE-weekend */
+      .dates article:nth-child(n+6) {
+        background-color: var(--background-free-days-color);
+      }
+
+      .dates article:nth-child(n+6):hover {
+        background-color: var(--accent-color);
+        color: white;
+      }
+
+      /* ЗАКРУГЛЕНИЯ */
+      .calendar-table section:first-child article:first-child {
+        border-top-left-radius: 10px;
+      }
+
+      .calendar-table section:first-child article:last-child {
+        border-top-right-radius: 10px;
+      }
+
+      .calendar-table section:last-child article:first-child {
+        border-bottom-left-radius: 10px;
+      }
+
+      .calendar-table section:last-child article:last-child {
+        border-bottom-right-radius: 10px;
+      }
+
+      #modal {
+        display: none;
+        /* Скрывает модальное окно, когда оно не активно */
+        position: fixed;
+        /* Позиционирует модальное окно относительно окна браузера */
+        z-index: 1;
+        /* Задает слой для модального окна, чтобы оно было поверх других элементов */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        /* Позволяет прокручивать контент, если он не помещается в окне */
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Фоновый цвет с прозрачностью для затемнения контента под модальным окном */
+      }
+
+      .modal-content {
+        position: fixed;
+        /* Позиционирует контент модального окна относительно окна браузера */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Центрирует контент модального окна */
+        background-color: var(--background-modal-color);
+        /* Фоновый цвет контента модального окна */
+
+        /* padding: 25px; */
+        /* Отступы вокруг контента модального окна */
+        border-radius: 20px;
+
+        width: 55%;
+        /* Ширина контента модального окна */
+        box-sizing: border-box;
+
+        display: grid;
+        /* !!!!!!!!!!!!!!!!!Сетка для размещения элементов внутри контента модального окна */
+        /* grid-template-rows: auto 1fr auto; */
+
+        /* Размеры строк сетки */
+        /* gap: 1rem; */
+        /* Отступы между элементами сетки */
+        align-items: center;
+        border: solid var(--accent-color) 2px;
+        /* Граница вокруг контента модального окна */
+
+        /* Изменяем grid-template-rows */
+        grid-template-rows: auto minmax(0, 1fr) auto;
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* padding: 1rem; */
+        /* Отступы вокруг элементов заголовка модального окна */
+        /* border-bottom: 1px solid var(--accent-color); */
+        /* Линия снизу под заголовком модального окна */
+      }
+
+      .modal-content span {
+        border: 0;
+        font-size: 1.25rem;
+        /* Размер шрифта текста заголовка */
+        font-weight: 800;
+        /* Толщина шрифта текста заголовка */
+        color: var(--accent-color);
+        /* Цвет текста заголовка */
+        padding-top: 8px;
+        /* padding-bottom: 0.5rem; */
+
+      }
+
+      #modal .button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        color: var(--accent-color);
+        background-color: white;
+        border: solid 1px var(--accent-color);
+        border-radius: 10px;
+        margin: 10px;
+      }
+
+      #modal .button:hover {
+        background-color: var(--accent-color);
+        /* Изменение фонового цвета кнопки при наведении */
+        color: white;
+        /* Изменение цвета текста кнопки при наведении */
+        transition: background-color .5s ease;
+        /* Плавный переход фонового цвета кнопки */
+      }
+
+      #modal .button:active {
+        transform: scale(1.05);
+        /* Увеличивает кнопку при нажатии */
+      }
+
+      .event-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 5px;
+        /* Отступы вокруг каждого элемента списка событий */
+        font-size: 1rem;
+        /* Размер шрифта текста элемента списка событий */
+        font-weight: 600;
+        /* Толщина шрифта текста элемента списка событий */
+        color: var(--text-color);
+        /* Цвет текста элемента списка событий */
+      }
+
+      #event-list {
+        display: flex;
+        /* Включает flexbox для элементов списка событий */
+        flex-direction: column;
+        /* Располагает элементы списка событий вертикально */
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      /* Стили для полей ввода в модальном окне */
+      input {
+        border: 0.0625rem solid #d2d2d7;
+        border-radius: 0.75rem;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        box-sizing: border-box;
+        font-size: 1.25rem;
+        color: var(--text-color);
+        font-weight: 400;
+        margin-right: 0.3125rem;
+      }
+
+      /* Стили для полей ввода при фокусе в модальном окне */
+      input:focus {
+        border: 0.0313rem solid #000000;
+        box-shadow: 0 0 0 3px var(--accent-color);
+        outline: none;
+      }
+
+      /* Стили для времени события в модальном окне */
+      .event-time {
+        flex: 1.4;
+        padding-left: 0.3125rem;
+      }
+
+      /* Стили для поля ввода события в модальном окне */
+      .event-input {
+        flex: 8;
+      }
+
+      /* управление кнопками в модальном окне */
+      .control-list {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .rotate-device {
+        /* Прячем изображение и текст по умолчанию */
+        display: none;
+
+        /* Размещаем контейнер по центру экрана */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        /* z-index должен быть выше, чем у остальных */
+      }
+
+      .rotate-text {
+        color: var(--accent-color);
+        font-size: 40px;
+      }
+
+
+      /* ---------- SMARTPHONE VERTICAL---------- */
+      @media (max-width: 768px) and (orientation: portrait) {
+        .modal-content {
+          width: 90%;
+          max-height: 95%;
+          overflow-y: auto;
+          /* Включаем прокрутку если понадобится */
+        }
+
+        .modal-content span {
+          font-size: 20px;
+          /* Размер шрифта текста заголовка */
+        }
+
+        #modal .button {
+          font-size: 18px;
+        }
+
+        .event-item {
+          font-size: 15px;
+          /* Размер шрифта промежутков времени */
+          font-weight: 600;
+          /* Толщина шрифта промежутков времени */
+          line-height: 0.9;
+          /* расстояние между строками промежутков времени */
+        }
+
+        /* Стили для полей ввода в модальном окне */
+        input {
+          padding-left: 10px;
+          padding-right: 5px;
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        /* Стили для полей ввода при фокусе в модальном окне */
+        input:focus {
+          border: 0.7px solid var(--accent-color);
+        }
+      }
+
+      /* ---------- SMARTPHONE HORIZONTAL ---------- */
+      @media screen and (max-width: 1023px) and (orientation: landscape) {
+
+        .container-main {
+          display: none;
+        }
+
+        .modal-content {
+          display: none;
+        }
+
+        .rotate-device {
+          /* Показываем изображение и текст при горизонтальной ориентации экрана */
+          display: block;
+        }
+
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <main class="container-main">
+
+      <nav class="navigation">
+
+        <section class="navigation-item" id="home" onclick="location.reload();">
+          <article>
+            <img src="./img/home.png">
+          </article>
+        </section>
+
+        <section class="navigation-item" id="prevMonth">
+          <article>
+            <img src="./img/left.png">
+          </article>
+        </section>
+
+        <section class="navigation-item">
+          <article id="currentMonthDisplay"></article>
+        </section>
+
+        <section class="navigation-item" id="nextMonth">
+          <article>
+            <img src="./img/right.png">
+          </article>
+        </section>
+
+        <section class="navigation-item" id="info">
+          <article>
+            <a href="resolution.html">
+              <img src="./img/info.png">
+            </a>
+          </article>
+        </section>
+
+      </nav>
+
+      <section class="calendar-table">
+
+        <section class="weekdays">
+
+          <article>Пн</article>
+          <article>Вт</article>
+          <article>Ср</article>
+          <article>Чт</article>
+          <article>Пт</article>
+          <article>Сб</article>
+          <article>Вс</article>
+
+        </section>
+
+        <section class="dates" id="week1">
+
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+        </section>
+
+        <section class="dates" id="week2">
+
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+        </section>
+
+        <section class="dates" id="week3">
+
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+        </section>
+
+        <section class="dates" id="week4">
+
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+        </section>
+
+        <section class="dates" id="week5">
+
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+        </section>
+
+        <section class="dates" id="week6">
+
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+        </section>
+
+      </section>
+
+    </main>
+
+    <section class="modal" id="modal">
+
+      <article class="modal-content">
+
+        <div class="modal-header">
+          <span id="modalDateDisplay"><!-- Подгружаем из JavaScript --></span>
+        </div>
+
+        <section id="event-list">
+          <!-- Здесь будут элементы со временем и полями для ввода -->
+        </section>
+
+        <div class="modal-controls">
+          <ul class="control-list">
+            <li class="control-list-item button" id="save-event">Сохранить</li>
+            <li class="control-list-item button" id="cancel">Отменить</li>
+          </ul>
+        </div>
+
+      </article>
+
+    </section>
+
+
+
+    <div class="rotate-device">
+      <img class="rotate-image" src="./img/rotate.png" alt="Поверните устройство">
+      <p class="rotate-text">Поверните устройство</p>
+    </div>
+
+
+    <span id="selectedDay" style="display: none;"></span>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script src="./js/script.js"></script>
+
+  </body>
+
+</html>

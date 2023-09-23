@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mansalva">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grenze">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Turret+Road">
+
+
+    <title>Javascript change font size</title>
+
+    <style>
+      html {
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        background-color: aliceblue;
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      main {
+        width: 800px;
+        margin: 0 auto;
+        background-color: rgb(195, 158, 146);
+        padding: 10px;
+        border: 5px solid grey;
+        border-radius: 15px;
+      }
+
+      button {
+        padding: 10px;
+        background-color: aqua;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 30px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <main>
+      <h1>Change font type with JavaScript</h1>
+      <hr>
+
+      <p>Note! All changes occur with JavaScipt.
+        The font type of the list is changed by pressing the button below.
+        The default font on the list is "Courier New", font size 16px.
+        But what happens if you press the button 10 times?
+        The font type for this list changes from the button
+        pressing</p>
+
+      <h2>The font size of this list changes by pressing a button</h2>
+
+      <ol>
+
+        <li>First push of a button changes font type to "Roboto"</li>
+        <li>The second push of a button changes the font type to "Mansalva"</li>
+        <li>The third Press of a button changes the font type to "Grenze"</li>
+        <li>The Fourth press of a button changes the font type to "Turret Road"</li>
+        <li>The Fifth push of the button returns the font type "Courier New"</li>
+
+      </ol>
+
+
+      <footer>
+        <button type="button" onclick="ChangeFont()">Change font</button>
+        <div id="currentFont">Current font: Courier New</div>
+      </footer>
+
+      <script>
+
+        let fontClick = 0;
+
+        function ChangeFont() {
+
+          fontClick++;
+
+          let listItems = document.querySelectorAll("ol li");
+          let currentFont = document.getElementById("currentFont");
+
+          if (fontClick === 1) {
+            listItems.forEach(li => li.style.fontFamily = "Roboto");
+            currentFont.textContent = "Current font: Roboto";
+          }
+
+          else if (fontClick === 2) {
+            listItems.forEach(li => li.style.fontFamily = "Mansalva");
+            currentFont.textContent = "Current font: Mansalva";
+          }
+
+          else if (fontClick === 3) {
+            listItems.forEach(li => li.style.fontFamily = "Grenze");
+            currentFont.textContent = "Current font: Grenze";
+          }
+
+          else if (fontClick === 4) {
+            listItems.forEach(li => li.style.fontFamily = "Turret Road");
+            currentFont.textContent = "Current font: Turret Road";
+          }
+
+          else if (fontClick === 5) {
+            listItems.forEach(li => li.style.fontFamily = "Courier New");
+            currentFont.textContent = "Current font: Courier New";
+
+            fontClick = 0;
+          }
+
+        }
+      </script>
+
+    </main>
+
+  </body>
+
+</html>

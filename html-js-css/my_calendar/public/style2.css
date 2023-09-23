@@ -1,0 +1,462 @@
+:root {
+  --background-color: hsl(200, 78%, 95%);
+  --background-free-days-color: hsl(200, 78%, 85%);
+  --background-modal-color: #ddcdbb;
+  --table-color: grey;
+  --text-color: #494949;
+  --data-color: blue;
+  --days-work-color: blue;
+  --days-free-color: #8A140E;
+  --accent-color: #8A140E;
+  --button-color: #8A140E;
+  --button-modal-color: #ffffff;
+  --current-day-color: #8A140E;
+}
+
+html {
+  /* font-size: 62.5%; */
+}
+
+html,
+body {
+  height: 99.7%;
+  margin: 0;
+  padding-left: 0.1875rem;
+  padding-right: 0.1875rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ----------------- МЕНЮ ----------------- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex: 0.74;
+  margin-bottom: 0.3125rem;
+  background-color: var(--background-color);
+}
+
+.nav-menu {
+  border: 0;
+}
+
+.nav article {
+  font-weight: 700;
+  border: solid var(--background-color) 0.0625rem;
+}
+
+#currentMonthDisplay {
+  letter-spacing: 0.0625rem;
+  text-align: center;
+  color: var(--accent-color);
+  font-size: 1.5625rem;
+}
+
+section {
+  display: flex;
+  flex: 1;
+  /* Это значение будет переопределено для .head и .days */
+  /* min-height: 0; */
+}
+
+
+
+#home,
+#nextMonth,
+#prevMonth,
+#info {
+  display: flex;
+  flex-grow: 0;
+  border-radius: 0.625rem;
+  width: 20%;
+}
+
+#home p,
+#nextMonth p,
+#prevMonth p,
+#info p {
+  display: flex;
+  color: var(--button-color);
+  font-size: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  /* text-decoration: none; */
+}
+
+#home:hover,
+#nextMonth:hover,
+#prevMonth:hover,
+#info:hover {
+  background-color: var(--accent-color);
+}
+
+#home:hover p,
+#nextMonth:hover p,
+#prevMonth:hover p,
+#info:hover p {
+  color: var(--button-modal-color);
+}
+
+#home:hover:active,
+#nextMonth:active,
+#prevMonth:active,
+#info:active {
+  transform: scale(1.10);
+}
+
+.days {
+  flex: 0.26;
+  /* 4.5% от 12.5% */
+  font-weight: 700;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+  border: 0.125rem solid var(--table-color);
+  border-bottom: 0;
+  overflow: hidden;
+}
+
+span {
+  flex: 1;
+  border: 0.0625rem solid var(--table-color);
+  border-top: none;
+  padding: 0.3125rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.days span:nth-child(-n+5) {
+  color: var(--days-work-color);
+}
+
+.days span:nth-child(n+6) {
+  color: var(--days-free-color);
+  background-color: var(--background-free-days-color);
+
+}
+
+.current-day {
+  font-weight: bold;
+  font-size: 1.875rem;
+  color: var(--current-day-color);
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  background-color: lightgray;
+}
+
+article {
+  flex: 1;
+  border: 0.0625rem solid var(--table-color);
+  padding: 0.3125rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.dates {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.dates article {
+  align-items: flex-start;
+  /* выравнивание по верху */
+  justify-content: flex-end;
+  /* выравнивание справа */
+  transition: background-color .3s ease;
+}
+
+.dates article:hover {
+  background-color: var(--accent-color);
+  /* font-weight: bold; */
+  font-size: 1.875rem;
+  color: #ffffff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+
+.dates:last-of-type article:first-child {
+  border-bottom-left-radius: 0.625rem;
+}
+
+.dates:last-of-type article:last-child {
+  border-bottom-right-radius: 0.625rem;
+}
+
+.dates article:nth-child(n+6) {
+  background-color: var(--background-free-days-color);
+
+}
+
+.dates article:nth-child(n+6):hover {
+  background-color: var(--accent-color);
+}
+
+.dates article:first-child {
+  border-left: solid var(--table-color) 0.1563rem;
+}
+
+.dates article:last-child {
+  border-right: 0.1563rem solid var(--table-color);
+}
+
+.dates:last-of-type article {
+  border-bottom: 0.125rem solid var(--table-color);
+}
+
+
+#modal {
+  display: none;
+  /* контролирует видимость элемента; по умолчанию модальное окно скрыто */
+  position: fixed;
+  /* позиционирование элемента относительно окна просмотра */
+  z-index: 1;
+  /* контролирует порядок наложения элементов; элементы с большим значением будут показаны поверх других */
+  left: 0;
+  /* позиция элемента относительно левого края */
+  top: 0;
+  /* позиция элемента относительно верхнего края */
+  width: 100%;
+  /* ширина элемента */
+  height: 100%;
+  /* высота элемента */
+  overflow: auto;
+  /* контролирует что происходит с контентом, который выходит за пределы элемента */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* цвет фона элемента, с использованием прозрачности */
+
+}
+
+.modal-content {
+  position: fixed;
+  /* позиционирование элемента относительно окна просмотра */
+  top: 50%;
+  /* позиция элемента относительно верхнего края */
+  left: 50%;
+  /* позиция элемента относительно левого края */
+  transform: translate(-50%, -50%);
+  /* сдвигает элемент по X и Y оси */
+  background-color: #fefefe;
+  /* цвет фона элемента */
+  padding: 0.5rem;
+
+  border-radius: 3.125rem;
+  /* стиль границы элемента */
+  width: 55%;
+  /* ширина элемента */
+  box-sizing: border-box;
+  /* свойство определяет каким образом будут рассчитываться размеры элемента */
+  display: flex;
+  /* тип дисплея, который позволяет использовать flexbox-лейаут */
+  flex-direction: column;
+  /* определяет направление основной оси контейнера flex */
+  align-items: center;
+  /* выравнивает flex-элементы по перпендикулярной оси */
+  border: solid var(--accent-color) 0.125rem;
+}
+
+.modal-content span {
+  border: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#modal .button {
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: var(--button-color);
+  background-color: white;
+  border: solid 0.0625rem var(--button-color);
+  border-radius: 0.625rem;
+  margin: 0.625rem;
+}
+
+#modal .button:hover {
+  background-color: var(--button-color);
+  color: white;
+  transition: background-color .5s ease;
+}
+
+#modal .button:active {
+  transform: scale(1.05);
+}
+
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+#event-list {
+  display: flex;
+  flex-direction: column;
+  /* определяет направление основной оси контейнера flex */
+  align-items: center;
+  /* выравнивает flex-элементы по перпендикулярной оси */
+  justify-content: flex-start;
+  /* выравнивает flex-элементы по основной оси */
+  width: 100%;
+}
+
+input {
+  border: 0.0625rem solid #d2d2d7;
+  border-radius: 0.75rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  box-sizing: border-box;
+  /* свойство определяет каким образом будут рассчитываться размеры элемента */
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+input:focus {
+  border: 0.0313rem solid #000000;
+  box-shadow: 0 0 0 3px var(--button-color);
+  outline: none;
+}
+
+.event-time {
+  flex: 1.4;
+  /* пропорция */
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.event-input {
+  flex: 8;
+  /* пропорция */
+}
+
+/* Стили для планшетов в портретной ориентации */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .modal-content {
+    width: 75vw;
+  }
+
+  #modalDateDisplay {
+    padding: 0.3125rem;
+  }
+
+  .event-time {
+    flex: 2;
+    /* пропорция */
+    padding-right: 0.3125rem;
+  }
+}
+
+/* Стили для планшетов в альбомной ориентации и маленьких десктопов */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .event-time {
+    flex: 2;
+    /* пропорция */
+    padding-right: 0.3125rem;
+  }
+}
+
+/* Стили для смартфонов в портретной ориентации */
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .modal-content {
+    width: 98vw;
+    /* height: 90vh; */
+    border-radius: 1.25rem;
+  }
+
+  #modalDateDisplay {
+    font-size: 16px;
+  }
+
+  .event-time {
+    flex: 1.7;
+    padding-right: 0.3125rem;
+  }
+
+  */
+  /*
+  #event-list {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  input {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    box-sizing: border-box;
+
+    font-size: 16px;
+  }
+
+  .modal-content nav {
+    padding-bottom: 1rem;
+  } */
+}
+
+/* Стили для смартфонов в портретной ориентации */
+/* @media (min-width: 320px) and (max-width: 480px) {
+  .modal-content {
+    width: 98vw;
+    height: 90vh;
+    border-radius: 1.25rem;
+  }
+
+  #modalDateDisplay {
+    font-size: 16px;
+  }
+
+  .event-time {
+    flex: 1.7;
+  }
+
+  #event-list {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  input {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    box-sizing: border-box;
+
+    font-size: 16px;
+  }
+
+  .modal-content nav {
+    padding-bottom: 1rem;
+  }
+} */
+
+
+
+/* непонятно что */
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}

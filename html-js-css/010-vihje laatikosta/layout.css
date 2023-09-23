@@ -1,0 +1,50 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px;
+}
+
+.block_left {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.block_left li:nth-child(even) {
+    background-color: rgb(226, 224, 200);
+}
+
+.block_left h2 {
+    font-size: 50px;
+    margin: 50px;
+}
+
+.block_left h3 {
+    font-size: 30px;
+    margin: 50px;
+}
+
+.block_right {
+    flex-basis: 30%;
+    max-width: 30%;
+}
+
+.block_right li:nth-child(odd) {
+    background-color: rgb(226, 224, 200);
+}
+
+li {
+    padding: 15px 15px 0;
+    border-bottom-left-radius: 20px;
+}
