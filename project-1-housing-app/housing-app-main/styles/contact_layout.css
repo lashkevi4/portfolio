@@ -1,0 +1,258 @@
+html {
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 1rem;
+  background-color: #ffffff;
+}
+
+#logo img {
+  width: 2rem;
+  padding: 1.7rem;
+  margin-top: -8rem;
+}
+
+.topnav {
+  background-color: white;
+  width: 100%;
+  height: 3rem;
+  overflow: hidden;
+}
+
+.topnav a {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  text-decoration-line: none;
+  font-family: sans-serif;
+}
+
+.topnav ul {
+  display: flex;
+  float: right;
+  padding: 15px 30px;
+  text-decoration: none;
+  gap: 2rem;
+  font-family: initial;
+}
+
+.topnav a:hover {
+  box-shadow: inset 150px 0 0 0 #54b3d6;
+  color: white;
+}
+
+.small-title {
+  background-image: url(../images/first\ image.jpeg);
+  background-size: cover;
+  background-color: aqua;
+  background-position: center;
+  align-items: center;
+
+  height: 5rem;
+  border-radius: 0.4rem;
+}
+
+.small-title {
+  padding: 8rem;
+  font-size: 2.3rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.small-title h1 {
+  border: 1px solid #80808078;
+  padding: 3rem;
+  margin-top: -3rem;
+  background-color: #80808078;
+  border-radius: 20px 5px;
+}
+
+.middlenav ul {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  padding: 70px;
+  gap: 5rem;
+  font-family: initial;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+}
+
+.middlenav ul li {
+  border: 0.1rem solid lightgrey;
+  padding: 25px;
+  border-radius: 20px 5px;
+}
+
+.middlenav a {
+  position: relative;
+  text-decoration-line: none;
+  font-family: sans-serif;
+  color: #54b3d6;
+
+}
+
+.middlenav a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #54b3d6;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.middlenav a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.second-part {
+  padding: 4rem;
+  text-align: center;
+}
+
+#about-us {
+  padding: 3rem;
+  font-size: 1.5rem;
+  float: left;
+  font-weight: bold;
+}
+
+.side_img> {
+  width: 100%;
+  border-radius: 20px 5px;
+  margin-top: -8rem;
+  max-width: 100%;
+  position: relative;
+  float: left;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+
+#last-part {
+  padding: 3rem;
+  background-color: #00000021;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+#last-part ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+
+/* -------------------------------------------------------------------- */
+
+.people {
+  width: 100%;
+  font-family: sans-serif;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+
+  line-height: 1.2;
+  border-radius: 10px 5px;
+  background-color: #5caea812;
+}
+
+.human {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.p {
+  font-size: 1rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 2.5rem;
+  line-height: 190%;
+}
+
+.social a {
+  color: #54b3d6;
+}
+
+.social i {
+  font-size: 2rem;
+}
+
+.social p:first-child {
+  margin-right: 10px;
+}
+
+.social p:last-child {
+  margin-left: 10px;
+}
+
+.flags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flag {
+  width: 35px;
+  height: 35px;
+}
+
+aside {
+  background-color: #54b3d6;
+  border-radius: 10px;
+}
+
+aside ul {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+aside h3 {
+  font-size: 1.5rem;
+  padding: .7rem;
+}
+
+small {
+  font-size: .6rem;
+}

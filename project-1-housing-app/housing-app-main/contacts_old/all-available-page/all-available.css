@@ -1,0 +1,199 @@
+/* MAIN COLORS Blue #408EC6, Maroon #7A2048, Indigo #1E2761 and white */
+
+/* MOBILE VIEW */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+html {
+  font-size: 62.5%;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+}
+
+header figure {
+  display: block;
+  max-width: 100px;
+  margin-right: 2rem;
+}
+
+header figure img {
+  max-width: 100%;
+}
+
+header section h1 {
+  font-size: 4rem;
+}
+
+header section h3 {
+  font-size: 2.5rem;
+}
+
+/* NAV */
+
+nav {
+  background-color: #408ec6;
+  padding: 1rem 0 1rem 1rem;
+  box-shadow: -1px 8px 18px -10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  padding: 1rem;
+}
+
+nav ul li a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  color: rgb(199, 204, 209);
+}
+
+.title {
+  text-align: center;
+  font-size: 4rem;
+  padding: 3rem;
+  color: white;
+}
+
+.image-container {
+  background-image: url(https://cdn.localspins.com/wp-content/uploads/2020/05/13113530/elevation-mint-10-1024x664.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+/* MAIN */
+
+main {
+  padding-bottom: 6rem;
+}
+
+.article-wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+article {
+  display: flex;
+
+  margin: 1rem;
+  margin-bottom: 2rem;
+  font-size: medium;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 4px;
+  background-color: lightgray;
+}
+
+figure {
+  padding: 0.4rem;
+  display: block;
+  max-width: 150px;
+  display: flex;
+  background-color: #fff;
+}
+
+figure img {
+  max-width: 100%;
+}
+
+.inf {
+  flex-grow: 1;
+  padding: 1rem 0.4rem 0.4rem 0.4rem;
+}
+
+.amount {
+}
+
+.amount-second {
+  display: none;
+}
+
+button {
+  border-radius: 4px;
+  background-color: #7a2048;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  transition: all 0.5s;
+  cursor: pointer;
+  height: 100%;
+}
+
+button:hover {
+  background-color: #92134d;
+}
+
+.buttontext::before {
+  content: ">";
+}
+
+.info {
+  margin-bottom: 1rem;
+}
+
+.date {
+  margin-bottom: 1rem;
+}
+
+/* TABLET VIEW */
+
+@media only screen and (min-width: 600px) {
+  .buttontext::before {
+    content: "Buy ticket";
+  }
+
+  button {
+    height: 30px;
+  }
+
+  article {
+  }
+
+  .amount {
+    display: none;
+  }
+
+  .amount-second {
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: #7a2048;
+  }
+
+  .total-container {
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .inf {
+    padding-top: 1rem;
+    padding-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .inf h4 {
+    font-size: 2rem;
+  }
+}

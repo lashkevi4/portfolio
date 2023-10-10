@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/ecf5de3203.js" crossorigin="anonymous"></script>
+  <title>Thank you for order</title>
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="../thank-you-page/thank-you.css">
+</head>
+
+<body>
+  <header>
+    <figure>
+      <img src="../images/company-logo.png" alt="Company logo" />
+    </figure>
+    <section>
+      <h1>Company</h1>
+      <h3>Tickets online</h3>
+    </section>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../home-page/index.html">Home</a></li>
+      <li><a href="../about-page/about-page.html">About</a></li>
+      <li><a href="../contact-page/contact-page.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h3>Thank you!!!</h3>
+    <h3>Please check your e-mail</h3>
+    <button onclick="document.location='../home-page/index.html'">Continue to homepage <span id="time"></span></button>
+    <script>
+      var i = 30;//time
+      function time() {
+        document.getElementById("time").innerHTML = i;//counter
+        i--;//counter minus 1
+        if (i < 0) location.href = "../home-page/index.html";//redirect
+      }
+      time();
+      setInterval(time, 1000);
+    </script>
+  </main>
+
+  <section class=" about">
+    <h3>About us</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Velit blanditiis ut nemo! Lorem ipsum dolor sit an <a href="../about-page/about-page.html">amet ...</a></p>
+  </section>
+
+  <footer>
+    <p>Copyright @ 2022</p>
+    <ul>
+      <li><a href="http://facebook.com" style="color: white"><i class="fa-brands fa-facebook-f"></i></a></li>
+      <li><a href="http://instagram.com" style="color: white"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="http://twitter.com" style="color: white"><i class="fa-brands fa-twitter"></i></a></li>
+    </ul>
+  </footer>
+
+</body>
+
+</html>
