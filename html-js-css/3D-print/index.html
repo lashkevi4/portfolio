@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>3D PrintMaster Order</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+        font-family: Arial, sans-serif;
+      }
+
+
+      h1 {
+        text-align: center;
+      }
+
+      #header,
+      footer {
+        background-color: #007bff;
+        color: white;
+        padding: 20px;
+      }
+
+      #orderForm {
+        width: 100%;
+        max-width: 400px;
+        background-color: #fff;
+        margin: 20px auto;
+        border-radius: 10px;
+      }
+
+      #orderForm {
+        padding-bottom: 20px;
+      }
+
+
+
+      input,
+      label {
+        display: block;
+        width: calc(100% - 50px);
+        margin: 10px auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .input-label {
+        padding-top: 20px;
+        padding-left: 15px;
+        text-align: left;
+      }
+
+      #file {
+        margin-top: 50px;
+      }
+
+      #file-name {
+        padding: 10px;
+        text-align: center;
+      }
+
+
+      .delivery-option {
+        margin: 5px;
+        padding: 10px 20px;
+        background-color: gray;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .delivery-option:hover {
+        background-color: blue;
+      }
+
+      .delivery-buttons-wrapper {
+        display: flex;
+        justify-content: space-around;
+      }
+
+
+      input[type="submit"] {
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+        padding-bottom: 10px;
+        margin-top: 30px;
+      }
+
+
+
+      input[type="submit"]:hover {
+        background-color: darkblue;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        line-height: 1.5;
+      }
+
+      label[for="file"] {
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="header">
+      <h1>3D PrintMaster</h1>
+    </div>
+
+    <div id="orderForm">
+      <div class="input-label">Enter name</div>
+      <input type="text" id="name" placeholder="Name" required>
+
+      <div class="input-label">Enter phone number</div>
+      <input type="text" id="phone" placeholder="Phone" required>
+
+      <div class="input-label">Enter e-mail</div>
+      <input type="text" id="email" placeholder="Email" required>
+
+      <label for="file" style="cursor: pointer;">Choose a file</label>
+      <input type="file" id="file" style="display:none;" required>
+      <div id="file-name"></div>
+
+
+      <div class="delivery-buttons-wrapper"> <!-- Этот div добавлен -->
+        <button type="button" class="delivery-option">Delivery (€8)</button>
+        <button type="button" class="delivery-option">Self-pickup from Vantaa</button>
+      </div>
+
+
+      <input type="submit" id="submit" value="Submit">
+    </div>
+
+    <footer> <!-- Изменено: стили футера как у шапки -->
+      <div>Copyright © 2023 3D PrintMaster</div>
+      <div>
+        <a href="https://twitter.com"><img src="https://i.imgur.com/GthxC1D.png" alt="Twitter"></a>
+        <a href="https://facebook.com"><img src="https://i.imgur.com/yimRR5w.png" alt="Facebook"></a>
+        <a href="https://linkedin.com"><img src="https://i.imgur.com/v9SghfN.png" alt="LinkedIn"></a>
+      </div>
+    </footer>
+
+    <script>  <!-- Изменено: скрипт для работы новых кнопок -->
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const fileInput = document.getElementById("file");
+        const fileNameElement = document.getElementById("file-name");
+
+        fileInput.addEventListener("change", function () {
+          const fileName = fileInput.files[0].name;
+          fileNameElement.innerText = `Selected file: ${fileName}`;
+        });
+      });
+
+
+      document.querySelectorAll('.delivery-option').forEach(button => {
+        button.addEventListener('click', function () {
+          document.querySelectorAll('.delivery-option').forEach(btn => btn.classList.remove('selected'));
+          this.classList.add('selected');
+        });
+      });
+    </script>
+
+  </body>
+
+</html>
