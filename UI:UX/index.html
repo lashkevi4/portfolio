@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <style>
+      .container {
+        position: relative;
+      }
+
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        font-weight: bold;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .word {
+        animation: type 4s steps(10) infinite, erase 4s steps(10) infinite reverse;
+        width: 0;
+        display: inline-block;
+      }
+
+      @keyframes type {
+        100% {
+          width: 100%;
+        }
+      }
+
+      @keyframes erase {
+        0% {
+          width: 100%;
+        }
+
+        100% {
+          width: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="your_image.jpg" alt="Фото">
+      <div class="text">
+        <div class="word">Дизайнер</div>
+        <div class="word">Девелопер</div>
+        <div class="word">Тестировщик</div>
+      </div>
+    </div>
+  </body>
+
+</html>
