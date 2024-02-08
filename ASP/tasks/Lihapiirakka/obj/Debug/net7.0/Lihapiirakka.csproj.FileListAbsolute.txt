@@ -1,0 +1,15 @@
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/bin/Debug/net7.0/Lihapiirakka
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/bin/Debug/net7.0/Lihapiirakka.deps.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/bin/Debug/net7.0/Lihapiirakka.runtimeconfig.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/bin/Debug/net7.0/Lihapiirakka.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/bin/Debug/net7.0/Lihapiirakka.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/obj/Debug/net7.0/Lihapiirakka.csproj.AssemblyReference.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/obj/Debug/net7.0/Lihapiirakka.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/obj/Debug/net7.0/Lihapiirakka.AssemblyInfoInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/obj/Debug/net7.0/Lihapiirakka.AssemblyInfo.cs
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/obj/Debug/net7.0/Lihapiirakka.csproj.CoreCompileInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/obj/Debug/net7.0/Lihapiirakka.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/obj/Debug/net7.0/refint/Lihapiirakka.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/obj/Debug/net7.0/Lihapiirakka.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/obj/Debug/net7.0/Lihapiirakka.genruntimeconfig.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Lihapiirakka/obj/Debug/net7.0/ref/Lihapiirakka.dll

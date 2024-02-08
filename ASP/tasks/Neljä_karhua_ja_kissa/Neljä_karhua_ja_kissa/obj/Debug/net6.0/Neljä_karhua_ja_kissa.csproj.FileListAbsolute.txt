@@ -1,0 +1,15 @@
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/bin/Debug/net6.0/Neljä_karhua_ja_kissa
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/bin/Debug/net6.0/Neljä_karhua_ja_kissa.deps.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/bin/Debug/net6.0/Neljä_karhua_ja_kissa.runtimeconfig.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/bin/Debug/net6.0/Neljä_karhua_ja_kissa.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/bin/Debug/net6.0/Neljä_karhua_ja_kissa.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/obj/Debug/net6.0/Neljä_karhua_ja_kissa.csproj.AssemblyReference.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/obj/Debug/net6.0/Neljä_karhua_ja_kissa.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/obj/Debug/net6.0/Neljä_karhua_ja_kissa.AssemblyInfoInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/obj/Debug/net6.0/Neljä_karhua_ja_kissa.AssemblyInfo.cs
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/obj/Debug/net6.0/Neljä_karhua_ja_kissa.csproj.CoreCompileInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/obj/Debug/net6.0/Neljä_karhua_ja_kissa.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/obj/Debug/net6.0/refint/Neljä_karhua_ja_kissa.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/obj/Debug/net6.0/Neljä_karhua_ja_kissa.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/obj/Debug/net6.0/Neljä_karhua_ja_kissa.genruntimeconfig.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Neljä_karhua_ja_kissa/Neljä_karhua_ja_kissa/obj/Debug/net6.0/ref/Neljä_karhua_ja_kissa.dll

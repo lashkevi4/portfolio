@@ -1,0 +1,15 @@
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/bin/Debug/net6.0/Ritariryhmä_Liikkeelle
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/bin/Debug/net6.0/Ritariryhmä_Liikkeelle.deps.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/bin/Debug/net6.0/Ritariryhmä_Liikkeelle.runtimeconfig.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/bin/Debug/net6.0/Ritariryhmä_Liikkeelle.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/bin/Debug/net6.0/Ritariryhmä_Liikkeelle.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/obj/Debug/net6.0/Ritariryhmä_Liikkeelle.csproj.AssemblyReference.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/obj/Debug/net6.0/Ritariryhmä_Liikkeelle.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/obj/Debug/net6.0/Ritariryhmä_Liikkeelle.AssemblyInfoInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/obj/Debug/net6.0/Ritariryhmä_Liikkeelle.AssemblyInfo.cs
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/obj/Debug/net6.0/Ritariryhmä_Liikkeelle.csproj.CoreCompileInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/obj/Debug/net6.0/Ritariryhmä_Liikkeelle.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/obj/Debug/net6.0/refint/Ritariryhmä_Liikkeelle.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/obj/Debug/net6.0/Ritariryhmä_Liikkeelle.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/obj/Debug/net6.0/Ritariryhmä_Liikkeelle.genruntimeconfig.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Ritariryhmä_Liikkeelle/Ritariryhmä_Liikkeelle/obj/Debug/net6.0/ref/Ritariryhmä_Liikkeelle.dll

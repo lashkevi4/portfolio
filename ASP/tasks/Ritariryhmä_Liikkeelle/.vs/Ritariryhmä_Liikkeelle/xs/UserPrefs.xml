@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{49585CF2-918E-4D38-96D9-B2F038A1B63E}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ritariryhmä_Liikkeelle/Program.cs">
+    <Files>
+      <File FileName="Ritariryhmä_Liikkeelle/Program.cs" Line="37" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Ritariryhmä_Liikkeelle" expanded="True">
+            <Node name="Ritariryhmä_Liikkeelle">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Ritariryhmä__Liikkeelle PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

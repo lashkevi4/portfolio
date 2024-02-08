@@ -1,0 +1,15 @@
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/bin/Debug/net7.0/Kivi_paperi_sakset
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/bin/Debug/net7.0/Kivi_paperi_sakset.deps.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/bin/Debug/net7.0/Kivi_paperi_sakset.runtimeconfig.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/bin/Debug/net7.0/Kivi_paperi_sakset.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/bin/Debug/net7.0/Kivi_paperi_sakset.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/obj/Debug/net7.0/Kivi_paperi_sakset.csproj.AssemblyReference.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/obj/Debug/net7.0/Kivi_paperi_sakset.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/obj/Debug/net7.0/Kivi_paperi_sakset.AssemblyInfoInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/obj/Debug/net7.0/Kivi_paperi_sakset.AssemblyInfo.cs
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/obj/Debug/net7.0/Kivi_paperi_sakset.csproj.CoreCompileInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/obj/Debug/net7.0/Kivi_paperi_sakset.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/obj/Debug/net7.0/refint/Kivi_paperi_sakset.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/obj/Debug/net7.0/Kivi_paperi_sakset.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/obj/Debug/net7.0/Kivi_paperi_sakset.genruntimeconfig.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Kivi_paperi_sakset/obj/Debug/net7.0/ref/Kivi_paperi_sakset.dll

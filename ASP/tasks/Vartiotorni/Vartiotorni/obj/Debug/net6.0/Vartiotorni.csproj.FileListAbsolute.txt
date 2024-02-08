@@ -1,0 +1,15 @@
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/bin/Debug/net6.0/Vartiotorni
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/bin/Debug/net6.0/Vartiotorni.deps.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/bin/Debug/net6.0/Vartiotorni.runtimeconfig.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/bin/Debug/net6.0/Vartiotorni.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/bin/Debug/net6.0/Vartiotorni.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/obj/Debug/net6.0/Vartiotorni.csproj.AssemblyReference.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/obj/Debug/net6.0/Vartiotorni.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/obj/Debug/net6.0/Vartiotorni.AssemblyInfoInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/obj/Debug/net6.0/Vartiotorni.AssemblyInfo.cs
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/obj/Debug/net6.0/Vartiotorni.csproj.CoreCompileInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/obj/Debug/net6.0/Vartiotorni.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/obj/Debug/net6.0/refint/Vartiotorni.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/obj/Debug/net6.0/Vartiotorni.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/obj/Debug/net6.0/Vartiotorni.genruntimeconfig.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vartiotorni/Vartiotorni/obj/Debug/net6.0/ref/Vartiotorni.dll

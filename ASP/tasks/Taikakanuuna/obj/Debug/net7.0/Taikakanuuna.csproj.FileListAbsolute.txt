@@ -1,0 +1,15 @@
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/bin/Debug/net7.0/Taikakanuuna
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/bin/Debug/net7.0/Taikakanuuna.deps.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/bin/Debug/net7.0/Taikakanuuna.runtimeconfig.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/bin/Debug/net7.0/Taikakanuuna.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/bin/Debug/net7.0/Taikakanuuna.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/obj/Debug/net7.0/Taikakanuuna.csproj.AssemblyReference.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/obj/Debug/net7.0/Taikakanuuna.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/obj/Debug/net7.0/Taikakanuuna.AssemblyInfoInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/obj/Debug/net7.0/Taikakanuuna.AssemblyInfo.cs
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/obj/Debug/net7.0/Taikakanuuna.csproj.CoreCompileInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/obj/Debug/net7.0/Taikakanuuna.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/obj/Debug/net7.0/refint/Taikakanuuna.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/obj/Debug/net7.0/Taikakanuuna.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/obj/Debug/net7.0/Taikakanuuna.genruntimeconfig.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Taikakanuuna/obj/Debug/net7.0/ref/Taikakanuuna.dll

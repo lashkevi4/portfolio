@@ -1,0 +1,15 @@
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/bin/Debug/net7.0/pin_puk_code
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/bin/Debug/net7.0/pin_puk_code.deps.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/bin/Debug/net7.0/pin_puk_code.runtimeconfig.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/bin/Debug/net7.0/pin_puk_code.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/bin/Debug/net7.0/pin_puk_code.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/obj/Debug/net7.0/pin_puk_code.csproj.AssemblyReference.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/obj/Debug/net7.0/pin_puk_code.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/obj/Debug/net7.0/pin_puk_code.AssemblyInfoInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/obj/Debug/net7.0/pin_puk_code.AssemblyInfo.cs
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/obj/Debug/net7.0/pin_puk_code.csproj.CoreCompileInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/obj/Debug/net7.0/pin_puk_code.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/obj/Debug/net7.0/refint/pin_puk_code.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/obj/Debug/net7.0/pin_puk_code.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/obj/Debug/net7.0/pin_puk_code.genruntimeconfig.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/pin_puk_code/obj/Debug/net7.0/ref/pin_puk_code.dll

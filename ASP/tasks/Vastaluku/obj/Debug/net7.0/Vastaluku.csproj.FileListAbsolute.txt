@@ -1,0 +1,15 @@
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/bin/Debug/net7.0/Vastaluku
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/bin/Debug/net7.0/Vastaluku.deps.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/bin/Debug/net7.0/Vastaluku.runtimeconfig.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/bin/Debug/net7.0/Vastaluku.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/bin/Debug/net7.0/Vastaluku.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/obj/Debug/net7.0/Vastaluku.csproj.AssemblyReference.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/obj/Debug/net7.0/Vastaluku.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/obj/Debug/net7.0/Vastaluku.AssemblyInfoInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/obj/Debug/net7.0/Vastaluku.AssemblyInfo.cs
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/obj/Debug/net7.0/Vastaluku.csproj.CoreCompileInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/obj/Debug/net7.0/Vastaluku.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/obj/Debug/net7.0/refint/Vastaluku.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/obj/Debug/net7.0/Vastaluku.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/obj/Debug/net7.0/Vastaluku.genruntimeconfig.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Vastaluku/obj/Debug/net7.0/ref/Vastaluku.dll

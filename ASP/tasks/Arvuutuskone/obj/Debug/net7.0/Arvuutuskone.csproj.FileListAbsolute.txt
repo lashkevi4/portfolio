@@ -1,0 +1,15 @@
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/obj/Debug/net7.0/Arvuutuskone.csproj.AssemblyReference.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/obj/Debug/net7.0/Arvuutuskone.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/obj/Debug/net7.0/Arvuutuskone.AssemblyInfoInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/obj/Debug/net7.0/Arvuutuskone.AssemblyInfo.cs
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/obj/Debug/net7.0/Arvuutuskone.csproj.CoreCompileInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/bin/Debug/net7.0/Arvuutuskone
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/bin/Debug/net7.0/Arvuutuskone.deps.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/bin/Debug/net7.0/Arvuutuskone.runtimeconfig.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/bin/Debug/net7.0/Arvuutuskone.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/bin/Debug/net7.0/Arvuutuskone.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/obj/Debug/net7.0/Arvuutuskone.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/obj/Debug/net7.0/refint/Arvuutuskone.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/obj/Debug/net7.0/Arvuutuskone.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/obj/Debug/net7.0/Arvuutuskone.genruntimeconfig.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvuutuskone/obj/Debug/net7.0/ref/Arvuutuskone.dll

@@ -1,0 +1,15 @@
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/bin/Debug/net6.0/Valtakuntien_Herruus
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/bin/Debug/net6.0/Valtakuntien_Herruus.deps.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/bin/Debug/net6.0/Valtakuntien_Herruus.runtimeconfig.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/bin/Debug/net6.0/Valtakuntien_Herruus.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/bin/Debug/net6.0/Valtakuntien_Herruus.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/obj/Debug/net6.0/Valtakuntien_Herruus.csproj.AssemblyReference.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/obj/Debug/net6.0/Valtakuntien_Herruus.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/obj/Debug/net6.0/Valtakuntien_Herruus.AssemblyInfoInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/obj/Debug/net6.0/Valtakuntien_Herruus.AssemblyInfo.cs
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/obj/Debug/net6.0/Valtakuntien_Herruus.csproj.CoreCompileInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/obj/Debug/net6.0/Valtakuntien_Herruus.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/obj/Debug/net6.0/refint/Valtakuntien_Herruus.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/obj/Debug/net6.0/Valtakuntien_Herruus.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/obj/Debug/net6.0/Valtakuntien_Herruus.genruntimeconfig.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Valtakuntien_Herruus/Valtakuntien_Herruus/obj/Debug/net6.0/ref/Valtakuntien_Herruus.dll

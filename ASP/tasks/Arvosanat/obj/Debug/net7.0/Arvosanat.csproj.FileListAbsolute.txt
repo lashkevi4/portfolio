@@ -1,0 +1,15 @@
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/bin/Debug/net7.0/Arvosanat
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/bin/Debug/net7.0/Arvosanat.deps.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/bin/Debug/net7.0/Arvosanat.runtimeconfig.json
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/bin/Debug/net7.0/Arvosanat.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/bin/Debug/net7.0/Arvosanat.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/obj/Debug/net7.0/Arvosanat.csproj.AssemblyReference.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/obj/Debug/net7.0/Arvosanat.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/obj/Debug/net7.0/Arvosanat.AssemblyInfoInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/obj/Debug/net7.0/Arvosanat.AssemblyInfo.cs
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/obj/Debug/net7.0/Arvosanat.csproj.CoreCompileInputs.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/obj/Debug/net7.0/Arvosanat.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/obj/Debug/net7.0/refint/Arvosanat.dll
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/obj/Debug/net7.0/Arvosanat.pdb
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/obj/Debug/net7.0/Arvosanat.genruntimeconfig.cache
+/Users/aleksandrlashkevich/Documents/Programming/2023/ASP/tasks/Arvosanat/obj/Debug/net7.0/ref/Arvosanat.dll
