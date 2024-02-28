@@ -32,13 +32,23 @@ input[type="time"] {
   border-radius: 20px;
   padding: 10px;
   font-size: 50px;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  /* Эффект тени */
+  transition: box-shadow 0.3s ease;
+  /* Плавный переход для тени */
+}
+
+input[type="time"]:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  /* Более заметная тень при наведении */
 }
 
 /*рекомендуемое время пробуждения*/
 .recommended-times {
   margin-top: 20px;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 @media (max-width: 768px) {
@@ -47,7 +57,7 @@ input[type="time"] {
 
     h1,
     h2 {
-      font-size: 30px;
+      font-size: 35px;
     }
   }
 
@@ -57,6 +67,6 @@ input[type="time"] {
   }
 
   .recommended-times {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
